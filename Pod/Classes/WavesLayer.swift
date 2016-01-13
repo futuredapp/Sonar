@@ -108,11 +108,10 @@ class WavesLayer: CALayer {
         let arcCenter = CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame))
         
         let arc = UIBezierPath(arcCenter: arcCenter, radius: r, startAngle: circlePath.startAngle, endAngle: circlePath.endAngle, clockwise: true)
-        let layer = WaveShapeLayer()
+        let layer = CAShapeLayer()
 
         layer.path = arc.CGPath
         layer.strokeColor = UIColor(red: 0.898, green: 0.969, blue: 0.976, alpha: 1.00).CGColor
-//        layer.shadowColor = UIColor(red: 0.898, green: 0.969, blue: 0.980, alpha: 1.00).CGColor
         layer.frame = self.bounds
         layer.fillColor = UIColor.whiteColor().CGColor
 

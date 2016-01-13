@@ -15,7 +15,6 @@
 		586889FA4B6767B5ED7BFB2C03B3014C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		64794BA1864C43820C39A4D08482BE6D /* Sonar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 96855654F7F9D55EEBF9FD8D485624AA /* Sonar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75750D1E4D37A8B6BCEB4177C49CC666 /* Sonar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 94D3D41423BFCB4310979BF81EF70F19 /* Sonar.bundle */; };
-		7DF0B318D567873D329E2ACF09E13968 /* WaveShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30C8AEF6D247AB83DD410DA42F290A /* WaveShapeLayer.swift */; };
 		9A41122998802C0189C844004151648E /* RadialGradienLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EB8A68AE0324E4238496518C49EFB2 /* RadialGradienLayer.swift */; };
 		BB5F8568F11162A1C58F870BB615B767 /* SonarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BC9122A326DE846DC084A174B326E /* SonarItemView.swift */; };
 		DBC76FD8BB6756E6523DA14E1C4ADA3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
@@ -53,7 +52,6 @@
 		10FD74BD01F15457C7D61DD098D00963 /* Pods-Sonar_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sonar_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		195E4B51FB5D2C000C893F6D65E82ED3 /* Sonar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Sonar.modulemap; sourceTree = "<group>"; };
 		1BE6F803F61C62C875C8688E32251ED1 /* Pods-Sonar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sonar_Example.release.xcconfig"; sourceTree = "<group>"; };
-		3D30C8AEF6D247AB83DD410DA42F290A /* WaveShapeLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WaveShapeLayer.swift; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		488E25018784018A351F5376D23950D0 /* Pods_Sonar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sonar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49EA265BFB301173B7E816285225258B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 				02EB8A68AE0324E4238496518C49EFB2 /* RadialGradienLayer.swift */,
 				B55BC9122A326DE846DC084A174B326E /* SonarItemView.swift */,
 				8DD9A61A3333B4E1EC8490436480466A /* SonarView.swift */,
-				3D30C8AEF6D247AB83DD410DA42F290A /* WaveShapeLayer.swift */,
 				D3FFABD9CB3C7E920DAD857A7B74DA56 /* WavesLayer.swift */,
 			);
 			path = Classes;
@@ -431,7 +428,6 @@
 				0CCB6BA206C9E2AB2584EDE67D788A01 /* Sonar-dummy.m in Sources */,
 				BB5F8568F11162A1C58F870BB615B767 /* SonarItemView.swift in Sources */,
 				47651E66F5425C9984A521534211692D /* SonarView.swift in Sources */,
-				7DF0B318D567873D329E2ACF09E13968 /* WaveShapeLayer.swift in Sources */,
 				2A04EB90516FCDF494499607887597AD /* WavesLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
