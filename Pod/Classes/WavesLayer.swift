@@ -73,7 +73,8 @@ class WavesLayer: CALayer {
             _waveLayers.append(layer)
             
             let gradientColors = [UIColor.whiteColor().CGColor, UIColor.whiteColor().CGColor, SonarView.lineShadowColor.CGColor]
-            let gradientLocations: [CGFloat] = [0.0, 0.9, 1.0]
+            let gradientSize = 1.0 - (18 / radius)
+            let gradientLocations: [CGFloat] = [0.0, gradientSize, 1.0]
             let gradient = RadialGradientLayer(frame: self.frame, radius: radius - 0.5, center: CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame)), colors: gradientColors, locations: gradientLocations)
             self.addSublayer(gradient)
             _waveLayers.append(gradient)
