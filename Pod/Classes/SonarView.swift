@@ -36,6 +36,7 @@ public class SonarView: UIView {
     private lazy var distanceFormatter: MKDistanceFormatter = MKDistanceFormatter()
     
     // Public properties
+    /// For SonarViewDelegate and SonarViewLayout
     public weak var delegate: SonarViewDelegate?
     public weak var dataSource: SonarViewDataSource? {
         didSet {
