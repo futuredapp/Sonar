@@ -66,7 +66,6 @@ class WavesLayer: CALayer {
         
         // Draw new layers
         for num in (1..._numberOfWaves).reverse() {
-            print(CGFloat(num) * _distanceBetweenWaves)
             let radius = CGFloat(num) * _distanceBetweenWaves
             let layer = self.circleWithRadius(radius: radius)
             layer.frame = self.bounds

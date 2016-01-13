@@ -34,11 +34,6 @@ class RadialGradientLayer: CALayer {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSublayers() {
-        super.layoutSublayers()
-        
-    }
-    
     override func drawInContext(ctx: CGContext) {
         super.drawInContext(ctx)
         if _needDraw {
@@ -46,11 +41,8 @@ class RadialGradientLayer: CALayer {
             
             CGContextSaveGState(ctx)
             let colorSpace = CGColorSpaceCreateDeviceRGB()
-            
             let gradient = CGGradientCreateWithColors(colorSpace, colors, locations)
             
-            
-            print("drawing gradient - center:\(self.center) radius:\(radius)")
             CGContextDrawRadialGradient(ctx, gradient, self.center, 0.0, self.center, radius, CGGradientDrawingOptions(rawValue: 0))
         }
     }

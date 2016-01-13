@@ -181,7 +181,6 @@ public class SonarView: UIView {
         }
         
         let center = CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame))
-        
         let length = endAngle - startAngle
         
         let radianAngle = (length * (Double(position + 1) / Double(numberOfPositions + 1))) + startAngle
