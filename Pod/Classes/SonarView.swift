@@ -42,9 +42,9 @@ public class SonarView: UIView {
             self.reloadData()
         }
     }
-    public static var lineColor: UIColor = UIColor(red: 1.000, green: 0.660, blue: 0.638, alpha: 1.00)
-    public static var lineShadowColor: UIColor = UIColor(red: 1.000, green: 0.777, blue: 0.773, alpha: 1.00)
-    public static var distanceTextColor: UIColor = UIColor(red: 1.000, green: 0.660, blue: 0.638, alpha: 1.00)
+    public static var lineColor: UIColor = UIColor(red: 0.898, green: 0.969, blue: 0.980, alpha: 1.00)
+    public static var lineShadowColor: UIColor = UIColor(red: 0.949, green: 0.988, blue: 0.992, alpha: 1.00)
+    public static var distanceTextColor: UIColor = UIColor(red: 0.663, green: 0.878, blue: 0.925, alpha: 1.00)
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
