@@ -1,0 +1,25 @@
+{
+  "name": "Sonar",
+  "version": "0.1.0",
+  "summary": "A short description of Sonar.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/Sonar",
+  "license": "MIT",
+  "authors": {
+    "Aleš Kocur": "ales@thefuntasty.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/Sonar.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "Sonar": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

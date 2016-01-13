@@ -1,0 +1,6 @@
+framework module Pods_Sonar_Example {
+  umbrella header "Pods-Sonar_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
