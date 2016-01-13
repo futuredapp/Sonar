@@ -16,6 +16,7 @@
 		78656528249CF69CD2A130F1 /* Pods_Sonar_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022056A401D190CCC1689110 /* Pods_Sonar_Tests.framework */; };
 		907389171C4681BE00547BA8 /* TestSonarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907389151C4681BE00547BA8 /* TestSonarItemView.swift */; };
 		907389181C4681BE00547BA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907389161C4681BE00547BA8 /* ViewController.swift */; };
+		9073891A1C46A87B00547BA8 /* TestSonarItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907389191C46A87B00547BA8 /* TestSonarItemView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		6EA52AC4EF2E5CFA6D8CE888 /* Pods-Sonar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sonar_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sonar_Tests/Pods-Sonar_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		907389151C4681BE00547BA8 /* TestSonarItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSonarItemView.swift; sourceTree = "<group>"; };
 		907389161C4681BE00547BA8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		907389191C46A87B00547BA8 /* TestSonarItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestSonarItemView.xib; sourceTree = "<group>"; };
 		A1AE30F921725FB6B2C98EE6 /* Pods-Sonar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sonar_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sonar_Tests/Pods-Sonar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		ECFF4FD5E094FF1881370B95 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				907389151C4681BE00547BA8 /* TestSonarItemView.swift */,
+				907389191C46A87B00547BA8 /* TestSonarItemView.xib */,
 				907389161C4681BE00547BA8 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -252,6 +255,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				9073891A1C46A87B00547BA8 /* TestSonarItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 
 extension ViewController: SonarViewDataSource {
@@ -41,7 +41,7 @@ extension ViewController: SonarViewDataSource {
         case 0:
             return 2
         case 1:
-            return 2
+            return 3
         case 2:
             return 4
         default:
@@ -50,7 +50,21 @@ extension ViewController: SonarViewDataSource {
     }
     
     func sonarView(sonarView: SonarView, itemViewForWave waveIndex: Int, atIndex: Int) -> SonarItemView {
-        return TestSonarItemView(frame: CGRectZero)
+        let itemView = self.newItemView()
+        itemView.imageView.image = randomAvatar()
+        
+        return itemView
+    }
+    
+    // MARK: - Helpers
+    
+    private func randomAvatar() -> UIImage {
+        let index = arc4random_uniform(3) + 1
+        return UIImage(named: "avatar\(index)")!
+    }
+    
+    private func newItemView() -> TestSonarItemView {
+        return NSBundle.mainBundle().loadNibNamed("TestSonarItemView", owner: self, options: nil).first as! TestSonarItemView
     }
 }
 
