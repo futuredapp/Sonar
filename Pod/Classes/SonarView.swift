@@ -15,9 +15,9 @@ public protocol SonarViewDataSource: class {
     func sonarView(sonarView: SonarView, itemViewForWave waveIndex: Int, atIndex: Int) -> SonarItemView
 }
 
-@objc public protocol SonarViewDelegate: class {
+public protocol SonarViewDelegate: class {
     func sonarView(sonarView: SonarView, didSelectObjectInWave waveIndex: Int, atIndex: Int)
-    optional func sonarView(sonarView: SonarView, distanceForWaveAtIndex waveIndex: Int) -> Distance
+    func sonarView(sonarView: SonarView, distanceForWaveAtIndex waveIndex: Int) -> Distance?
 }
 
 public protocol SonarViewLayout: class {
@@ -97,7 +97,7 @@ public class SonarView: UIView {
         for waveIndex in 0..<numberOfWaves {
             let numberOfItemsInWave = dataSource.sonarView(self, numberOfItemForWaveIndex: waveIndex)
             
-            if let distance = self.delegate?.sonarView?(self, distanceForWaveAtIndex: waveIndex) {
+            if let distance = self.delegate?.sonarView(self, distanceForWaveAtIndex: waveIndex) {
                 let distanceLabel = SonarView.distanceLabel()
                 distanceLabel.text = distanceFormatter.stringFromDistance(distance)
                 

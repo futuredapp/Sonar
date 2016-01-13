@@ -43,7 +43,7 @@ extension ViewController: SonarViewDataSource {
         case 1:
             return 3
         case 2:
-            return 4
+            return 5
         default:
             return 2
         }
@@ -79,8 +79,13 @@ extension ViewController: SonarViewDelegate {
         print("Did select item in wave \(waveIndex) at index \(atIndex)")
     }
     
-    func sonarView(sonarView: SonarView, distanceForWaveAtIndex waveIndex: Int) -> Distance {
-        return 100.0 * Double(waveIndex + 1)
+    func sonarView(sonarView: SonarView, distanceForWaveAtIndex waveIndex: Int) -> Distance? {
+        
+        if self.sonarView(sonarView, numberOfItemForWaveIndex: waveIndex) == 2 {
+            return 100.0 * Double(waveIndex + 1)
+        } else {
+            return nil
+        }
     }
 }
 

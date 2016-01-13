@@ -19,6 +19,13 @@ class TestSonarItemView: SonarItemView {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = 25
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.imageView.clipsToBounds = true
     }
 
 }
