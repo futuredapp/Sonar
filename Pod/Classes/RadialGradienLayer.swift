@@ -26,6 +26,8 @@ class RadialGradientLayer: CALayer {
         
         super.init()
         
+        self.rasterizationScale = UIScreen.mainScreen().scale * 2
+        self.shouldRasterize = true
         self.frame = frame
         self.setNeedsDisplay()
     }

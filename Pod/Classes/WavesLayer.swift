@@ -72,7 +72,9 @@ class WavesLayer: CALayer {
             self.addSublayer(layer)
             _waveLayers.append(layer)
             
-            let gradient = RadialGradientLayer(frame: self.frame, radius: radius, center: CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame)), colors: [UIColor.whiteColor().CGColor, UIColor.whiteColor().CGColor, UIColor(red: 0.949, green: 0.988, blue: 0.992, alpha: 1.00).CGColor], locations: [0.0, 0.9, 1.0])
+            let gradientColors = [UIColor.whiteColor().CGColor, UIColor.whiteColor().CGColor, SonarView.lineShadowColor.CGColor]
+            let gradientLocations: [CGFloat] = [0.0, 0.9, 1.0]
+            let gradient = RadialGradientLayer(frame: self.frame, radius: radius - 0.5, center: CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame)), colors: gradientColors, locations: gradientLocations)
             self.addSublayer(gradient)
             _waveLayers.append(gradient)
         }
@@ -110,10 +112,12 @@ class WavesLayer: CALayer {
         let layer = CAShapeLayer()
 
         layer.path = arc.CGPath
-        layer.strokeColor = UIColor(red: 0.898, green: 0.969, blue: 0.976, alpha: 1.00).CGColor
+        layer.strokeColor = SonarView.lineColor.CGColor
         layer.frame = self.bounds
         layer.fillColor = UIColor.whiteColor().CGColor
-
+        layer.lineWidth = 1.5
+        layer.rasterizationScale = UIScreen.mainScreen().scale
+        
         return layer
     }
     

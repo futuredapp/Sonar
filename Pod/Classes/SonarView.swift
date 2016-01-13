@@ -42,6 +42,9 @@ public class SonarView: UIView {
             self.reloadData()
         }
     }
+    public static var lineColor: UIColor = UIColor(red: 1.000, green: 0.660, blue: 0.638, alpha: 1.00)
+    public static var lineShadowColor: UIColor = UIColor(red: 1.000, green: 0.777, blue: 0.773, alpha: 1.00)
+    public static var distanceTextColor: UIColor = UIColor(red: 1.000, green: 0.660, blue: 0.638, alpha: 1.00)
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -56,6 +59,7 @@ public class SonarView: UIView {
     // Initial setup
     private func setup() {
         self.waveLayer = WavesLayer(frame: self.bounds)
+        self.waveLayer.rasterizationScale = UIScreen.mainScreen().scale
         self.layer.addSublayer(self.waveLayer)
     }
     
@@ -111,7 +115,7 @@ public class SonarView: UIView {
                 distanceLabel.layer.position = position
                 
                 let gradientSize: CGFloat = 60
-                let gradient = RadialGradientLayer(frame: CGRect(center: position, width: gradientSize, height: gradientSize), radius: gradientSize / 2, center: CGPointMake(gradientSize / 2, gradientSize / 2), colors: [UIColor.whiteColor().CGColor, UIColor.whiteColor().colorWithAlphaComponent(0.7).CGColor, UIColor.whiteColor().colorWithAlphaComponent(0.0).CGColor], locations: [0.0, 0.7, 1.0])
+                let gradient = RadialGradientLayer(frame: CGRect(center: position, width: gradientSize, height: gradientSize), radius: gradientSize / 2, center: CGPointMake(gradientSize / 2, gradientSize / 2), colors: [UIColor.whiteColor().CGColor, UIColor.whiteColor().colorWithAlphaComponent(1.0).CGColor, UIColor.whiteColor().colorWithAlphaComponent(0.0).CGColor], locations: [0.0, 0.6, 1.0])
                 _shadows.append(gradient)
                 self.layer.insertSublayer(gradient, below: distanceLabel.layer)
             }
@@ -153,7 +157,7 @@ public class SonarView: UIView {
     private class func distanceLabel() -> UILabel {
         let label = UILabel()
         label.font = UIFont(name: "Avenir-Heavy", size: 10.0)
-        label.textColor = UIColor(red: 0.659, green: 0.878, blue: 0.925, alpha: 1.00)
+        label.textColor = SonarView.distanceTextColor
 
         return label
     }
