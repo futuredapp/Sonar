@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MapKit
 
 public protocol SonarViewDataSource: class {
     func numberOfWaves(sonarView: SonarView) -> Int
@@ -17,14 +16,12 @@ public protocol SonarViewDataSource: class {
 
 public protocol SonarViewDelegate: class {
     func sonarView(sonarView: SonarView, didSelectObjectInWave waveIndex: Int, atIndex: Int)
-    func sonarView(sonarView: SonarView, distanceForWaveAtIndex waveIndex: Int) -> Distance?
+    func sonarView(sonarView: SonarView, textForWaveAtIndex waveIndex: Int) -> String?
 }
 
 public protocol SonarViewLayout: class {
     func sonarView(sonarView: SonarView, sizeForItemInWave waveIndex: Int, atIndex: Int) -> CGSize
 }
-
-public typealias Distance = Double
 
 public class SonarView: UIView {
 
@@ -33,7 +30,6 @@ public class SonarView: UIView {
     private var _itemViews: [SonarItemView] = []
     private var _shadows: [RadialGradientLayer] = []
     private var _needsLayout = false
-    private lazy var distanceFormatter: MKDistanceFormatter = MKDistanceFormatter()
     
     // Public properties
     /// For SonarViewDelegate and SonarViewLayout
@@ -102,9 +98,9 @@ public class SonarView: UIView {
         for waveIndex in 0..<numberOfWaves {
             let numberOfItemsInWave = dataSource.sonarView(self, numberOfItemForWaveIndex: waveIndex)
             
-            if let distance = self.delegate?.sonarView(self, distanceForWaveAtIndex: waveIndex) {
+            if let textForWave = self.delegate?.sonarView(self, textForWaveAtIndex: waveIndex) {
                 let distanceLabel = SonarView.distanceLabel()
-                distanceLabel.text = distanceFormatter.stringFromDistance(distance)
+                distanceLabel.text = textForWave
                 
                 self.addSubview(distanceLabel)
                 

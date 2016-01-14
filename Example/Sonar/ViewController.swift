@@ -9,10 +9,12 @@
 import UIKit
 import CoreLocation
 import Sonar
+import MapKit
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var sonarView: SonarView!
+    private lazy var distanceFormatter: MKDistanceFormatter = MKDistanceFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,10 +81,9 @@ extension ViewController: SonarViewDelegate {
         print("Did select item in wave \(waveIndex) at index \(atIndex)")
     }
     
-    func sonarView(sonarView: SonarView, distanceForWaveAtIndex waveIndex: Int) -> Distance? {
-        
+    func sonarView(sonarView: SonarView, textForWaveAtIndex waveIndex: Int) -> String? {
         if self.sonarView(sonarView, numberOfItemForWaveIndex: waveIndex) == 2 {
-            return 100.0 * Double(waveIndex + 1)
+            return self.distanceFormatter.stringFromDistance(100.0 * Double(waveIndex + 1))
         } else {
             return nil
         }
