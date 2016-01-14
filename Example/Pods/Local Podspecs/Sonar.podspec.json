@@ -1,16 +1,16 @@
 {
   "name": "Sonar",
-  "version": "0.1.0",
-  "summary": "A short description of Sonar.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/Sonar",
+  "version": "2.0.0",
+  "summary": "Radar style view written in swift",
+  "description": "Simple radar style view written in swift",
+  "homepage": "https://github.com/thefuntasty/Sonar",
   "license": "MIT",
   "authors": {
     "Aleš Kocur": "ales@thefuntasty.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/Sonar.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/thefuntasty/Sonar.git",
+    "tag": "2.0.0"
   },
   "platforms": {
     "ios": "8.0"
