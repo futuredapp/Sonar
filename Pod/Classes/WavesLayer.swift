@@ -66,8 +66,12 @@ class WavesLayer: CALayer {
         // Calculate distance between layers
         _distanceBetweenWaves = calculateDistanceBetweenWaves()
         
+        if _numberOfWaves == 0 {
+            return
+        }
+        
         // Draw new layers
-        for num in (0..._numberOfWaves-1).reverse() {
+        for num in (0..<_numberOfWaves).reverse() {
             let calculatedRadius = CGFloat(num + 1) * _distanceBetweenWaves
             let radius = calculatedRadius + (calculatedRadius * CGFloat(_sonarView.sonarViewLayout.waveRadiusOffset(_sonarView)))
             let layer = self.circleWithRadius(radius: radius)
