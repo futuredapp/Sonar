@@ -55,7 +55,7 @@ public class SonarView: UIView {
     
     // Initial setup
     private func setup() {
-        self.waveLayer = WavesLayer(frame: self.bounds)
+        self.waveLayer = WavesLayer(frame: self.bounds, sonarView: self)
         self.waveLayer.rasterizationScale = UIScreen.mainScreen().scale
         self.layer.addSublayer(self.waveLayer)
     }
@@ -104,7 +104,8 @@ public class SonarView: UIView {
                 
                 self.addSubview(distanceLabel)
                 
-                let radius = Double(self.waveLayer.radiusForWave(waveIndex: waveIndex))
+                let calculatedRadius = Double(self.waveLayer.radiusForWave(waveIndex: waveIndex))
+                let radius = calculatedRadius + (calculatedRadius * self.sonarViewLayout.waveRadiusOffset(self))
                 let circlePath = self.waveLayer.circleAnglesForRadius(radius: CGFloat(radius))
                 let position = self.calculatePositionOnRadius(radius, startAngle: Double(circlePath.startAngle), endAngle: Double(circlePath.endAngle), position: self.sonarViewLayout.positionForWaveLabel(self, inWave: waveIndex))
                 
@@ -134,8 +135,10 @@ public class SonarView: UIView {
         let itemSize = self.sonarViewLayout.sizeForItem(self, inWave: waveIndex, atIndex: itemIndex)
         itemView.layer.bounds = CGRect(origin: CGPointZero, size: itemSize)
         
-        let radius = Double(self.waveLayer.radiusForWave(waveIndex: waveIndex))
+        let calculatedRadius = Double(self.waveLayer.radiusForWave(waveIndex: waveIndex))
+        let radius = calculatedRadius + (calculatedRadius * self.sonarViewLayout.waveRadiusOffset(self))
         let circlePath = self.waveLayer.circleAnglesForRadius(radius: CGFloat(radius))
+        
         let position = self.calculatePositionOnRadius(radius, startAngle: Double(circlePath.startAngle), endAngle: Double(circlePath.endAngle), position: self.sonarViewLayout.positionForItem(self, inWave: waveIndex, atIndex: itemIndex))
         
         // Set calculated position

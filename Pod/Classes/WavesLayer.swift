@@ -24,8 +24,10 @@ class WavesLayer: CALayer {
     private var _needsLayout = true
     private var _waveLayers: [CALayer] = []
     private var _distanceBetweenWaves: CGFloat = 0.0
+    private weak var _sonarView: SonarView!
     
-    init(frame: CGRect, numberOfWaves: Int = 5) {
+    init(frame: CGRect, numberOfWaves: Int = 5, sonarView: SonarView) {
+        self._sonarView = sonarView
         self._numberOfWaves = numberOfWaves
         super.init()
         self.frame = frame
@@ -66,7 +68,8 @@ class WavesLayer: CALayer {
         
         // Draw new layers
         for num in (1..._numberOfWaves).reverse() {
-            let radius = CGFloat(num) * _distanceBetweenWaves
+            let calculatedRadius = CGFloat(num) * _distanceBetweenWaves
+            let radius = calculatedRadius + (calculatedRadius * CGFloat(_sonarView.sonarViewLayout.waveRadiusOffset(_sonarView)))
             let layer = self.circleWithRadius(radius: radius)
             layer.frame = self.bounds
             self.addSublayer(layer)

@@ -43,4 +43,14 @@ public protocol SonarViewLayout {
     
     func positionForWaveLabel(sonarView: SonarView, inWave waveIndex: Int) -> Double
     
+    /** 
+     Offset for waves
+     
+     @param sonarView SonarView which is being layouted
+     
+     @return Value between 0 and 1
+     */
+    
+    func waveRadiusOffset(sonarView: SonarView) -> Double
+    
 }
