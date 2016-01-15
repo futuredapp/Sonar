@@ -90,19 +90,19 @@ class WavesLayer: CALayer {
     }
     
     func circleAnglesForRadius(radius r: CGFloat) -> (startAngle: CGFloat, endAngle: CGFloat) {
-        let w = CGRectGetWidth(self.frame)
+        let w = Double(CGRectGetWidth(self.frame))
         // Calculate angle α from equation b = 2a × cosα for isosceles triangle
-        let b: CGFloat = w < (r * 2) ? w : r
-        let a = r
+        let b: Double = w < (Double(r) * 2) ? w : Double(r)
+        let a = Double(r)
         let alpha = acos(b / (2 * a))
         
-        let beta = CGFloat(M_PI) - (alpha * 2)
+        let beta = CGFloat(M_PI - (Double(alpha) * 2))
         
         // Add up half of computed angle to either side from the top of arc (3/2⫪)
         let halfOfBeta = beta / 2
         let M_3_2_PI: CGFloat = CGFloat((3 / 2) * M_PI) // just a 3/2⫪ constant
-        let startRad = Int(alpha) == Int(beta) ? CGFloat(M_PI) : M_3_2_PI - halfOfBeta
-        let endRad = Int(alpha) == Int(beta) ? CGFloat(2 * M_PI) : M_3_2_PI + halfOfBeta
+        let startRad = CGFloat(alpha) == beta ? CGFloat(M_PI) : M_3_2_PI - halfOfBeta
+        let endRad = CGFloat(alpha) == beta ? CGFloat(2 * M_PI) : M_3_2_PI + halfOfBeta
         
         return (startAngle: startRad, endAngle: endRad)
     }

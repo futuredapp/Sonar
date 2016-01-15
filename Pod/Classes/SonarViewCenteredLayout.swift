@@ -16,7 +16,7 @@ public class SonarViewCenteredLayout {
     public weak var delegate: SonarViewCenteredLayoutDelegate?
     public var itemSize: CGSize = CGSizeMake(50, 50)
     public var segmentPadding: Double = 0.0
-    public var paddingFromEdge: Double = 1.0
+    public var edgeItemsShift: Double = 6.0
 }
 
 extension SonarViewCenteredLayout: SonarViewLayout {
@@ -38,23 +38,16 @@ extension SonarViewCenteredLayout: SonarViewLayout {
         if numberOfItemsInWave % 2 == 0 {
             
             let fullSegmentSize: Double = 100.0 // Just a value that represents 100%
-            let segmentSize = (fullSegmentSize / Double(numberOfItemsInWave + 2)) + segmentPadding
-            let paddingFromEdge: Double = segmentSize - 5.0
+            let segmentSize = (fullSegmentSize / Double(numberOfItemsInWave + 1)) + segmentPadding
+            let padding: Double = segmentSize - edgeItemsShift
             
             if index % 2 == 0 {
-                let size = (paddingFromEdge + (Double(index / 2) * segmentSize))
-                if waveIndex == 2 {
-                    print(size / fullSegmentSize)
-                }
+                let size = (padding + (Double(index / 2) * segmentSize))
                 return size / fullSegmentSize
             } else {
-                let size = fullSegmentSize - (paddingFromEdge + (Double((index / 2)) * segmentSize))
-                if waveIndex == 2 {
-                    print(size / fullSegmentSize)
-                }
+                let size = fullSegmentSize - (padding + (Double((index / 2)) * segmentSize))
                 return size / fullSegmentSize
             }
-            
         }
         
         return (Double(index + 1) / Double(numberOfItemsInWave + 1))

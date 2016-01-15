@@ -107,7 +107,8 @@ public class SonarView: UIView {
                 let calculatedRadius = Double(self.waveLayer.radiusForWave(waveIndex: waveIndex))
                 let radius = calculatedRadius + (calculatedRadius * self.sonarViewLayout.waveRadiusOffset(self))
                 let circlePath = self.waveLayer.circleAnglesForRadius(radius: CGFloat(radius))
-                let position = self.calculatePositionOnRadius(radius, startAngle: Double(circlePath.startAngle), endAngle: Double(circlePath.endAngle), position: self.sonarViewLayout.positionForWaveLabel(self, inWave: waveIndex))
+                let proportionalPosition = self.sonarViewLayout.positionForWaveLabel(self, inWave: waveIndex)
+                let position = self.calculatePositionOnRadius(radius, startAngle: Double(circlePath.startAngle), endAngle: Double(circlePath.endAngle), position: proportionalPosition)
                 
                 distanceLabel.sizeToFit()
                 distanceLabel.layer.position = position
@@ -139,7 +140,8 @@ public class SonarView: UIView {
         let radius = calculatedRadius + (calculatedRadius * self.sonarViewLayout.waveRadiusOffset(self))
         let circlePath = self.waveLayer.circleAnglesForRadius(radius: CGFloat(radius))
         
-        let position = self.calculatePositionOnRadius(radius, startAngle: Double(circlePath.startAngle), endAngle: Double(circlePath.endAngle), position: self.sonarViewLayout.positionForItem(self, inWave: waveIndex, atIndex: itemIndex))
+        let proportionalPosition = self.sonarViewLayout.positionForItem(self, inWave: waveIndex, atIndex: itemIndex)
+        let position = self.calculatePositionOnRadius(radius, startAngle: Double(circlePath.startAngle), endAngle: Double(circlePath.endAngle), position: proportionalPosition)
         
         // Set calculated position
         itemView.layer.position = position
