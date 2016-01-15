@@ -45,7 +45,7 @@ extension ViewController: SonarViewDataSource {
         case 1:
             return 3
         case 2:
-            return 5
+            return 4
         default:
             return 2
         }
@@ -70,19 +70,13 @@ extension ViewController: SonarViewDataSource {
     }
 }
 
-extension ViewController: SonarViewLayout {
-    func sonarView(sonarView: SonarView, sizeForItemInWave waveIndex: Int, atIndex: Int) -> CGSize {
-        return CGSizeMake(50, 50)
-    }
-}
-
 extension ViewController: SonarViewDelegate {
     func sonarView(sonarView: SonarView, didSelectObjectInWave waveIndex: Int, atIndex: Int) {
         print("Did select item in wave \(waveIndex) at index \(atIndex)")
     }
     
     func sonarView(sonarView: SonarView, textForWaveAtIndex waveIndex: Int) -> String? {
-        if self.sonarView(sonarView, numberOfItemForWaveIndex: waveIndex) == 2 {
+        if self.sonarView(sonarView, numberOfItemForWaveIndex: waveIndex) % 2 == 0 {
             return self.distanceFormatter.stringFromDistance(100.0 * Double(waveIndex + 1))
         } else {
             return nil

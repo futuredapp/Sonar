@@ -19,10 +19,6 @@ public protocol SonarViewDelegate: class {
     func sonarView(sonarView: SonarView, textForWaveAtIndex waveIndex: Int) -> String?
 }
 
-public protocol SonarViewLayout: class {
-    func sonarView(sonarView: SonarView, sizeForItemInWave waveIndex: Int, atIndex: Int) -> CGSize
-}
-
 public class SonarView: UIView {
 
     // Private properties
@@ -43,12 +39,16 @@ public class SonarView: UIView {
     public static var lineShadowColor: UIColor = UIColor(red: 0.949, green: 0.988, blue: 0.992, alpha: 1.00)
     public static var distanceTextColor: UIColor = UIColor(red: 0.663, green: 0.878, blue: 0.925, alpha: 1.00)
     
+    public var sonarViewLayout: SonarViewLayout!
+    
     required public init?(coder aDecoder: NSCoder) {
+        self.sonarViewLayout = SonarViewCenteredLayout()
         super.init(coder: aDecoder)
         self.setup()
     }
     
     override init(frame: CGRect) {
+        self.sonarViewLayout = SonarViewCenteredLayout()
         super.init(frame: frame)
         self.setup()
     }
@@ -106,7 +106,7 @@ public class SonarView: UIView {
                 
                 let radius = Double(self.waveLayer.radiusForWave(waveIndex: waveIndex))
                 let circlePath = self.waveLayer.circleAnglesForRadius(radius: CGFloat(radius))
-                let position = self.calculatePositionOnRadius(radius, startAngle: Double(circlePath.startAngle), endAngle: Double(circlePath.endAngle), position: 0, numberOfPositions: 1)
+                let position = self.calculatePositionOnRadius(radius, startAngle: Double(circlePath.startAngle), endAngle: Double(circlePath.endAngle), position: self.sonarViewLayout.positionForWaveLabel(self, inWave: waveIndex))
                 
                 distanceLabel.sizeToFit()
                 distanceLabel.layer.position = position
@@ -131,17 +131,12 @@ public class SonarView: UIView {
         _itemViews.append(itemView)
         itemView.position = SonarPosition(waveIndex: waveIndex, itemIndex: itemIndex)
         
-        // If delegate conforms to SonarViewLayout protocol, use given size, otherwise use autolayout to calculate its compressed size
-        if let layoutDelegate = self.delegate as? SonarViewLayout {
-            let itemSize = layoutDelegate.sonarView(self, sizeForItemInWave: waveIndex, atIndex: itemIndex)
-            itemView.layer.bounds = CGRect(origin: CGPointZero, size: itemSize)
-        } else {
-            itemView.layer.bounds = CGRect(origin: CGPointZero, size: itemView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize))
-        }
+        let itemSize = self.sonarViewLayout.sizeForItem(self, inWave: waveIndex, atIndex: itemIndex)
+        itemView.layer.bounds = CGRect(origin: CGPointZero, size: itemSize)
         
         let radius = Double(self.waveLayer.radiusForWave(waveIndex: waveIndex))
         let circlePath = self.waveLayer.circleAnglesForRadius(radius: CGFloat(radius))
-        let position = self.calculatePositionOnRadius(radius, startAngle: Double(circlePath.startAngle), endAngle: Double(circlePath.endAngle), position: itemIndex, numberOfPositions: numberOfItemsInWave)
+        let position = self.calculatePositionOnRadius(radius, startAngle: Double(circlePath.startAngle), endAngle: Double(circlePath.endAngle), position: self.sonarViewLayout.positionForItem(self, inWave: waveIndex, atIndex: itemIndex))
         
         // Set calculated position
         itemView.layer.position = position
@@ -175,17 +170,11 @@ public class SonarView: UIView {
     @return Point with calculated position
     */
     
-    private func calculatePositionOnRadius(onRadius: Double, startAngle: Double, endAngle: Double, position: Int, numberOfPositions: Int) -> CGPoint {
-        
-        if position < 0 || position >= numberOfPositions {
-            assertionFailure("*** SonarView: Out of range!")
-        }
+    private func calculatePositionOnRadius(onRadius: Double, startAngle: Double, endAngle: Double, position: Double) -> CGPoint {
         
         let center = CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame))
         let length = endAngle - startAngle
-        
-        let radianAngle = (length * (Double(position + 1) / Double(numberOfPositions + 1))) + startAngle
-        
+        let radianAngle = startAngle + (length * position)
         let x = onRadius * cos(radianAngle) + Double(center.x)
         let y = onRadius * sin(radianAngle) + Double(center.y)
         
