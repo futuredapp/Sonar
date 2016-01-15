@@ -17,6 +17,7 @@ public class SonarViewCenteredLayout {
     public var itemSize: CGSize = CGSizeMake(50, 50)
     public var segmentPadding: Double = 0.0
     public var edgeItemsShift: Double = 6.0
+    public var waveRadiusOffset: Double = 0.0
 }
 
 extension SonarViewCenteredLayout: SonarViewLayout {
@@ -58,6 +59,6 @@ extension SonarViewCenteredLayout: SonarViewLayout {
     }
     
     public func waveRadiusOffset(sonarView: SonarView) -> Double {
-        return 0.1
+        return waveRadiusOffset
     }
 }
