@@ -100,13 +100,14 @@ class WavesLayer: CALayer {
         let a = Double(r)
         let alpha = acos(b / (2 * a))
         
-        let beta = CGFloat(M_PI - (Double(alpha) * 2))
+        let beta = M_PI - (Double(alpha) * 2)
         
         // Add up half of computed angle to either side from the top of arc (3/2⫪)
         let halfOfBeta = beta / 2
-        let M_3_2_PI: CGFloat = CGFloat((3 / 2) * M_PI) // just a 3/2⫪ constant
-        let startRad = CGFloat(alpha) == beta ? CGFloat(M_PI) : M_3_2_PI - halfOfBeta
-        let endRad = CGFloat(alpha) == beta ? CGFloat(2 * M_PI) : M_3_2_PI + halfOfBeta
+        let M_3_2_PI: Double = (3 / 2) * M_PI // just a 3/2⫪ constant
+        // TODO: The rounding is ugly!!!
+        let startRad = Double(round(1000 * alpha) / 1000) == Double(round(1000 * beta) / 1000) ? CGFloat(M_PI) : CGFloat(M_3_2_PI - halfOfBeta)
+        let endRad = Double(round(1000 * alpha) / 1000) == Double(round(1000 * beta) / 1000) ? CGFloat(2 * M_PI) : CGFloat(M_3_2_PI + halfOfBeta)
         
         return (startAngle: startRad, endAngle: endRad)
     }
