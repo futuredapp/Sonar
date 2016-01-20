@@ -24,7 +24,7 @@ class WavesLayer: CALayer {
     private var _needsLayout = true
     private var _waveLayers: [CALayer] = []
     private var _distanceBetweenWaves: CGFloat = 0.0
-    private weak var _sonarView: SonarView!
+    weak var _sonarView: SonarView!
     
     init(frame: CGRect, numberOfWaves: Int = 5, sonarView: SonarView) {
         self._sonarView = sonarView
@@ -35,6 +35,17 @@ class WavesLayer: CALayer {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override init(layer: AnyObject) {
+        if let l = layer as? WavesLayer {
+            self._numberOfWaves = l.numberOfWaves()
+            self._sonarView = l._sonarView
+        } else {
+            self._numberOfWaves = 5
+            assertionFailure("Missuse of the overriden initializatior!")
+        }
+        super.init(layer: layer)
     }
     
     override func layoutSublayers() {
