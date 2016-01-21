@@ -32,20 +32,18 @@ public protocol SonarViewDataSource: class {
 }
 ```
 
-`SonarItemView` is just a UIView subclass. In order to use your custom view in radar, make your view SonarItemView subclass. The size of view is determined via layout delegate (like UICollectionView) or calculated by autolayout if the protocol isn't implemented.
+`SonarItemView` is just a UIView subclass. In order to use your custom view in radar, make your view SonarItemView subclass. The size of view is determined via layout. The layout is defined by SonarViewLayout protocol. Sonar comes with one predefined layout - SonarViewCenteredLayout. The items in a wave are placed from edges to the center, for example if we have 4 items in wave, first is placed at the left side, second at the right side, third at the left again but a right from the first one and so on. I know, the image would be better:
 
-```swift
-public protocol SonarViewLayout: class {
-    func sonarView(sonarView: SonarView, sizeForItemInWave waveIndex: Int, atIndex: Int) -> CGSize
-}
-```
+<img src="https://raw.githubusercontent.com/thefuntasty/Sonar/master/sonarLayoutScreenshot.png" width="300" />
+
+If you need different behaviour, you can of course create your own layout by adopting the SonarViewLayout a pass it to the SonarView. See [SonarViewLayout](https://github.com/thefuntasty/Sonar/blob/master/Pod/Classes/SonarViewLayout.swift) for more information.
 
 The last protocol is Delegate which handles selections and titles on each wave
 
 ```swift
 public protocol SonarViewDelegate: class {
     func sonarView(sonarView: SonarView, didSelectObjectInWave waveIndex: Int, atIndex: Int)
-    func sonarView(sonarView: SonarView, distanceForWaveAtIndex waveIndex: Int) -> Distance?
+    func sonarView(sonarView: SonarView, textForWaveAtIndex waveIndex: Int) -> String?
 }
 ```
 
