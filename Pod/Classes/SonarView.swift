@@ -56,6 +56,7 @@ public class SonarView: UIView {
     // Initial setup
     private func setup() {
         self.waveLayer = WavesLayer(frame: self.bounds, sonarView: self)
+        self.waveLayer.shouldRasterize = true
         self.waveLayer.rasterizationScale = UIScreen.mainScreen().scale
         self.layer.addSublayer(self.waveLayer)
     }
