@@ -42,6 +42,7 @@ class WavesLayer: CALayer {
             self._numberOfWaves = l.numberOfWaves()
             self._sonarView = l._sonarView
             self._waveLayers = l._waveLayers
+            self._needsLayout = false
         } else {
             self._numberOfWaves = 5
             assertionFailure("Missuse of the overriden initializatior!")
