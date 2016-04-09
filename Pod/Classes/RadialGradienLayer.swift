@@ -14,8 +14,6 @@ class RadialGradientLayer: CALayer {
     let center: CGPoint
     let locations: [CGFloat]
     
-    var _needDraw = true
-    
     let colors: [CGColor]
     
     init(frame: CGRect, radius: CGFloat, center: CGPoint, colors: [CGColor], locations: [CGFloat] = [0.0, 1.0]){
@@ -38,15 +36,13 @@ class RadialGradientLayer: CALayer {
     
     override func drawInContext(ctx: CGContext) {
         super.drawInContext(ctx)
-        if _needDraw {
-            _needDraw = false
-            
-            CGContextSaveGState(ctx)
-            let colorSpace = CGColorSpaceCreateDeviceRGB()
-            let gradient = CGGradientCreateWithColors(colorSpace, colors, locations)
-            
-            CGContextDrawRadialGradient(ctx, gradient, self.center, 0.0, self.center, radius, CGGradientDrawingOptions(rawValue: 0))
-        }
+        
+        CGContextSaveGState(ctx)
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let gradient = CGGradientCreateWithColors(colorSpace, colors, locations)
+        
+        CGContextDrawRadialGradient(ctx, gradient, self.center, 0.0, self.center, radius, CGGradientDrawingOptions(rawValue: 0))
+        
     }
     
 }

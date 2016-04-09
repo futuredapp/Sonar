@@ -64,9 +64,8 @@ public class SonarView: UIView {
     override public func layoutSubviews() {
         super.layoutSubviews()
         
-        self.waveLayer.frame = self.bounds
-        
         if _needsLayout {
+            waveLayer.frame = self.bounds
             _needsLayout = false
             _reloadData()
         }
