@@ -147,7 +147,7 @@ public class SonarView: UIView {
         itemView.layer.position = position
         
         // Setup gesture recognizers
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("didSelectItem:"))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SonarView.didSelectItem(_:)))
         itemView.addGestureRecognizer(tapGestureRecognizer)
     }
     
