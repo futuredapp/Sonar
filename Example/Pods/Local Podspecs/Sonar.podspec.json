@@ -1,6 +1,6 @@
 {
   "name": "Sonar",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "summary": "Radar style view written in swift",
   "description": "Simple radar style view written in swift",
   "homepage": "https://github.com/thefuntasty/Sonar",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/thefuntasty/Sonar.git",
-    "tag": "2.0.0"
+    "tag": "2.0.1"
   },
   "platforms": {
     "ios": "8.0"
