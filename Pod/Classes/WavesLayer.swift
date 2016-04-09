@@ -41,6 +41,7 @@ class WavesLayer: CALayer {
         if let l = layer as? WavesLayer {
             self._numberOfWaves = l.numberOfWaves()
             self._sonarView = l._sonarView
+            self._waveLayers = l._waveLayers
         } else {
             self._numberOfWaves = 5
             assertionFailure("Missuse of the overriden initializatior!")
