@@ -65,7 +65,7 @@ If you need to expose another properties or you have ideas how to improve it, fi
 
 ## Requirements
 
-iOS 8+, Swift 2.0+
+iOS 8+, Swift 2.2+
 
 ## Installation
 
