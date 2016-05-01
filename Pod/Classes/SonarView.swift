@@ -169,9 +169,8 @@ public class SonarView: UIView {
         
         itemView.transform = CGAffineTransformMakeScale(0.7, 0.7)
         
-        let randomDuration = Double((arc4random_uniform(5) + 5)) / 10
         
-        UIView.animateKeyframesWithDuration(0.4, delay: (Double(waveIndex) * 0.3) + 0.2, options: UIViewKeyframeAnimationOptions.CalculationModeLinear, animations: {
+        UIView.animateKeyframesWithDuration(0.4, delay: (Double(itemIndex) * 0.1) + (Double(waveIndex) * 0.3) + 0.1, options: UIViewKeyframeAnimationOptions.CalculationModeLinear, animations: {
             UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: 1 / 2) {
                 itemView.alpha = 1.0
                 itemView.transform = CGAffineTransformMakeScale(1.15, 1.15)
