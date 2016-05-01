@@ -6,6 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/Sonar.svg?style=flat)](http://cocoapods.org/pods/Sonar)
 
 <img src=https://raw.githubusercontent.com/thefuntasty/Sonar/master/screenshot.png width=300 />
+<img src=https://raw.githubusercontent.com/thefuntasty/Sonar/master/sonar-animation.gif width=300 />
 
 Simple radar style view, written in Swift, pure CoreAnimation (no images). Highly adjustable.
 
