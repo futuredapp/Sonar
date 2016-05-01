@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -21,13 +21,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZ7-fb-mPs">
+                                <rect key="frame" x="531" y="30" width="49" height="29"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                <state key="normal" title="RELOAD">
+                                    <color key="titleColor" red="0.19607843458652496" green="0.21568627655506134" blue="0.23529411852359772" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reloadData:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gZo-15-gmE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hqV-jq-EZI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="6ni-JR-yoX"/>
                             <constraint firstAttribute="trailing" secondItem="hqV-jq-EZI" secondAttribute="trailing" id="9Pf-Xh-qgN"/>
+                            <constraint firstItem="VZ7-fb-mPs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="Cnn-ER-CId"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hqV-jq-EZI" secondAttribute="bottom" id="I7U-tG-jWQ"/>
                             <constraint firstItem="hqV-jq-EZI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PL5-6t-IPB"/>
+                            <constraint firstAttribute="trailing" secondItem="VZ7-fb-mPs" secondAttribute="trailing" constant="20" id="d2a-PT-ZUR"/>
                         </constraints>
                     </view>
                     <connections>

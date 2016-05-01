@@ -72,6 +72,36 @@ class WavesLayer: CALayer {
     
     private func drawWaves() {
         
+        CATransaction.begin()
+        
+        CATransaction.setCompletionBlock {
+            self._drawWaves()
+        }
+        
+        _waveLayers.forEach {layer in
+            let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
+            strokeAnimation.duration = 0.3
+            strokeAnimation.fromValue = 1.0
+            strokeAnimation.toValue = 0.0
+            strokeAnimation.removedOnCompletion = false
+            strokeAnimation.fillMode = kCAFillModeForwards
+            layer.addAnimation(strokeAnimation, forKey: "strokeEnd")
+            
+            if let layer = layer as? RadialGradientLayer {
+                let displayAnimation = CABasicAnimation(keyPath: "opacity")
+                displayAnimation.duration = 0.3
+                displayAnimation.fromValue = 1.0
+                displayAnimation.toValue = 0.0
+                displayAnimation.removedOnCompletion = false
+                displayAnimation.fillMode = kCAFillModeForwards
+                layer.addAnimation(displayAnimation, forKey: "opacity")
+            }
+        }
+        
+        CATransaction.commit()
+    }
+    
+    private func _drawWaves() {
         // Clean up existing layers if there are some
         _waveLayers.forEach { $0.removeFromSuperlayer() }
         _waveLayers.removeAll()
@@ -88,6 +118,19 @@ class WavesLayer: CALayer {
             let calculatedRadius = CGFloat(num + 1) * _distanceBetweenWaves
             let radius = calculatedRadius + (calculatedRadius * CGFloat(_sonarView.sonarViewLayout.waveRadiusOffset(_sonarView)))
             let layer = self.circleWithRadius(radius: radius)
+            
+            let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
+            strokeAnimation.duration = 0.3
+            strokeAnimation.beginTime = CACurrentMediaTime() + Double(num) * 0.3
+            strokeAnimation.fromValue = 0.0
+            strokeAnimation.toValue = 1.0
+            strokeAnimation.removedOnCompletion = false
+            strokeAnimation.fillMode = kCAFillModeForwards
+            
+            layer.addAnimation(strokeAnimation, forKey: "strokeEnd")
+            
+            layer.strokeEnd = 0.0
+            
             layer.frame = self.bounds
             self.addSublayer(layer)
             _waveLayers.append(layer)
@@ -96,9 +139,22 @@ class WavesLayer: CALayer {
             let gradientSize = 1.0 - (18 / radius)
             let gradientLocations: [CGFloat] = [0.0, gradientSize, 1.0]
             let gradient = RadialGradientLayer(frame: self.frame, radius: radius - 0.5, center: CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame)), colors: gradientColors, locations: gradientLocations)
+            
+            let displayAnimation = CABasicAnimation(keyPath: "opacity")
+            displayAnimation.duration = 0.3
+            displayAnimation.beginTime = CACurrentMediaTime() + Double(num) * 0.3
+            displayAnimation.fromValue = 0.0
+            displayAnimation.toValue = 1.0
+            displayAnimation.removedOnCompletion = false
+            displayAnimation.fillMode = kCAFillModeForwards
+            
+            gradient.addAnimation(displayAnimation, forKey: "opacity")
+            
+            gradient.opacity = 0.0
             self.addSublayer(gradient)
             _waveLayers.append(gradient)
         }
+
     }
     
     private func calculateDistanceBetweenWaves() -> CGFloat {
@@ -125,7 +181,7 @@ class WavesLayer: CALayer {
         return (startAngle: startRad, endAngle: endRad)
     }
     
-    private func circleWithRadius(radius r: CGFloat) -> CALayer {
+    private func circleWithRadius(radius r: CGFloat) -> CAShapeLayer {
         
         let circlePath = self.circleAnglesForRadius(radius: r)
         let arcCenter = CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame))

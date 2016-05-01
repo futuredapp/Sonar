@@ -25,6 +25,7 @@ public class SonarView: UIView {
     private var waveLayer: WavesLayer!
     private var _itemViews: [SonarItemView] = []
     private var _shadows: [RadialGradientLayer] = []
+    private var _labels: [UIView] = []
     private var _needsLayout = false
     
     // Public properties
@@ -87,48 +88,64 @@ public class SonarView: UIView {
             return
         }
         
-        let numberOfWaves = dataSource.numberOfWaves(self)
-        self.waveLayer.setNumberOfWaves(numberOfWaves)
         
-        _itemViews.forEach { $0.removeFromSuperview() }
-        _itemViews.removeAll()
-        _shadows.forEach { $0.removeFromSuperlayer() }
-        _shadows.removeAll()
-        
-        for waveIndex in 0..<numberOfWaves {
-            let numberOfItemsInWave = dataSource.sonarView(self, numberOfItemForWaveIndex: waveIndex)
+        UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            self._itemViews.forEach { $0.alpha = 0.0 }
+        }) { finished in
             
-            if let textForWave = self.delegate?.sonarView(self, textForWaveAtIndex: waveIndex) {
-                let distanceLabel = SonarView.distanceLabel()
-                distanceLabel.text = textForWave
-                
-                self.addSubview(distanceLabel)
-                
-                let calculatedRadius = Double(self.waveLayer.radiusForWave(waveIndex: waveIndex))
-                let radius = calculatedRadius + (calculatedRadius * self.sonarViewLayout.waveRadiusOffset(self))
-                let circlePath = self.waveLayer.circleAnglesForRadius(radius: CGFloat(radius))
-                let proportionalPosition = self.sonarViewLayout.positionForWaveLabel(self, inWave: waveIndex)
-                let position = self.calculatePositionOnRadius(radius, startAngle: Double(circlePath.startAngle), endAngle: Double(circlePath.endAngle), position: proportionalPosition)
-                
-                distanceLabel.sizeToFit()
-                distanceLabel.layer.position = position
-                
-                let gradientSize: CGFloat = 60
-                let gradient = RadialGradientLayer(frame: CGRect(center: position, width: gradientSize, height: gradientSize), radius: gradientSize / 2, center: CGPointMake(gradientSize / 2, gradientSize / 2), colors: [UIColor.whiteColor().CGColor, UIColor.whiteColor().colorWithAlphaComponent(1.0).CGColor, UIColor.whiteColor().colorWithAlphaComponent(0.0).CGColor], locations: [0.0, 0.6, 1.0])
-                _shadows.append(gradient)
-                self.layer.insertSublayer(gradient, below: distanceLabel.layer)
-            }
+            let numberOfWaves = dataSource.numberOfWaves(self)
+            self.waveLayer.setNumberOfWaves(numberOfWaves)
             
-            for itemIndex in 0..<numberOfItemsInWave {
-                let itemView = dataSource.sonarView(self, itemViewForWave: waveIndex, atIndex: itemIndex)
-                configureItemView(itemView, forWave: waveIndex, atIndex: itemIndex, numberOfItemsInWave: numberOfItemsInWave)
+            self._itemViews.forEach { $0.removeFromSuperview() }
+            self._itemViews.removeAll()
+            self._shadows.forEach { $0.removeFromSuperlayer() }
+            self._shadows.removeAll()
+            self._labels.forEach { $0.removeFromSuperview() }
+            self._labels.removeAll()
+            
+            for waveIndex in 0..<numberOfWaves {
+                let numberOfItemsInWave = dataSource.sonarView(self, numberOfItemForWaveIndex: waveIndex)
+                
+                if let textForWave = self.delegate?.sonarView(self, textForWaveAtIndex: waveIndex) {
+                    let distanceLabel = SonarView.distanceLabel()
+                    distanceLabel.text = textForWave
+                    distanceLabel.alpha = 0.0
+                    
+                    self._labels.append(distanceLabel)
+                    self.addSubview(distanceLabel)
+                    
+                    let calculatedRadius = Double(self.waveLayer.radiusForWave(waveIndex: waveIndex))
+                    let radius = calculatedRadius + (calculatedRadius * self.sonarViewLayout.waveRadiusOffset(self))
+                    let circlePath = self.waveLayer.circleAnglesForRadius(radius: CGFloat(radius))
+                    let proportionalPosition = self.sonarViewLayout.positionForWaveLabel(self, inWave: waveIndex)
+                    let position = self.calculatePositionOnRadius(radius, startAngle: Double(circlePath.startAngle), endAngle: Double(circlePath.endAngle), position: proportionalPosition)
+                    
+                    distanceLabel.sizeToFit()
+                    distanceLabel.layer.position = position
+                    
+                    UIView.animateWithDuration(0.3, delay: Double(waveIndex) * 0.3, options: UIViewAnimationOptions.CurveEaseIn, animations: { 
+                        distanceLabel.alpha = 1.0
+                    }, completion: nil)
+                    
+                    let gradientSize: CGFloat = 60
+                    let gradient = RadialGradientLayer(frame: CGRect(center: position, width: gradientSize, height: gradientSize), radius: gradientSize / 2, center: CGPointMake(gradientSize / 2, gradientSize / 2), colors: [UIColor.whiteColor().CGColor, UIColor.whiteColor().colorWithAlphaComponent(1.0).CGColor, UIColor.whiteColor().colorWithAlphaComponent(0.0).CGColor], locations: [0.0, 0.6, 1.0])
+                    self._shadows.append(gradient)
+                    self.layer.insertSublayer(gradient, below: distanceLabel.layer)
+                }
+                
+                for itemIndex in 0..<numberOfItemsInWave {
+                    let itemView = dataSource.sonarView(self, itemViewForWave: waveIndex, atIndex: itemIndex)
+                    self.configureItemView(itemView, forWave: waveIndex, atIndex: itemIndex, numberOfItemsInWave: numberOfItemsInWave)
+                }
             }
         }
+        
     }
 
     
     private func configureItemView(itemView: SonarItemView, forWave waveIndex: Int, atIndex itemIndex: Int, numberOfItemsInWave: Int) {
         
+        itemView.alpha = 0.0
         self.addSubview(itemView)
         _itemViews.append(itemView)
         itemView.position = SonarPosition(waveIndex: waveIndex, itemIndex: itemIndex)
@@ -149,6 +166,20 @@ public class SonarView: UIView {
         // Setup gesture recognizers
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SonarView.didSelectItem(_:)))
         itemView.addGestureRecognizer(tapGestureRecognizer)
+        
+        itemView.transform = CGAffineTransformMakeScale(0.7, 0.7)
+        
+        let randomDuration = Double((arc4random_uniform(5) + 5)) / 10
+        
+        UIView.animateKeyframesWithDuration(0.4, delay: (Double(waveIndex) * 0.3) + 0.2, options: UIViewKeyframeAnimationOptions.CalculationModeLinear, animations: {
+            UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: 1 / 2) {
+                itemView.alpha = 1.0
+                itemView.transform = CGAffineTransformMakeScale(1.15, 1.15)
+            }
+            UIView.addKeyframeWithRelativeStartTime(1 / 2, relativeDuration: 1 / 2) {
+                itemView.transform = CGAffineTransformIdentity
+            }
+        }, completion: nil)
     }
     
     private class func distanceLabel() -> UILabel {
