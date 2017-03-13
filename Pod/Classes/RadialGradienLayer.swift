@@ -24,7 +24,7 @@ class RadialGradientLayer: CALayer {
         
         super.init()
         
-        self.rasterizationScale = UIScreen.mainScreen().scale * 2
+        self.rasterizationScale = UIScreen.main.scale * 2
         self.shouldRasterize = true
         self.frame = frame
         self.setNeedsDisplay()
@@ -34,14 +34,14 @@ class RadialGradientLayer: CALayer {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func drawInContext(ctx: CGContext) {
-        super.drawInContext(ctx)
+    override func draw(in ctx: CGContext) {
+        super.draw(in: ctx)
         
-        CGContextSaveGState(ctx)
+        ctx.saveGState()
         let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let gradient = CGGradientCreateWithColors(colorSpace, colors, locations)
+        let gradient = CGGradient(colorsSpace: colorSpace, colors: colors as CFArray, locations: locations)
         
-        CGContextDrawRadialGradient(ctx, gradient, self.center, 0.0, self.center, radius, CGGradientDrawingOptions(rawValue: 0))
+        ctx.drawRadialGradient(gradient!, startCenter: self.center, startRadius: 0.0, endCenter: self.center, endRadius: radius, options: CGGradientDrawingOptions(rawValue: 0))
         
     }
     

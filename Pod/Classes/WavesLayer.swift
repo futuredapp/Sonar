@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum WavesLayerError: ErrorType {
+enum WavesLayerError: Error {
     case OutOfBounds
 }
 
@@ -37,7 +37,7 @@ class WavesLayer: CALayer {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override init(layer: AnyObject) {
+    override init(layer: Any) {
         if let l = layer as? WavesLayer {
             self._numberOfWaves = l.numberOfWaves()
             self._sonarView = l._sonarView
@@ -72,36 +72,6 @@ class WavesLayer: CALayer {
     
     private func drawWaves() {
         
-        CATransaction.begin()
-        
-        CATransaction.setCompletionBlock {
-            self._drawWaves()
-        }
-        
-        _waveLayers.forEach {layer in
-            let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
-            strokeAnimation.duration = 0.3
-            strokeAnimation.fromValue = 1.0
-            strokeAnimation.toValue = 0.0
-            strokeAnimation.removedOnCompletion = false
-            strokeAnimation.fillMode = kCAFillModeForwards
-            layer.addAnimation(strokeAnimation, forKey: "strokeEnd")
-            
-            if let layer = layer as? RadialGradientLayer {
-                let displayAnimation = CABasicAnimation(keyPath: "opacity")
-                displayAnimation.duration = 0.3
-                displayAnimation.fromValue = 1.0
-                displayAnimation.toValue = 0.0
-                displayAnimation.removedOnCompletion = false
-                displayAnimation.fillMode = kCAFillModeForwards
-                layer.addAnimation(displayAnimation, forKey: "opacity")
-            }
-        }
-        
-        CATransaction.commit()
-    }
-    
-    private func _drawWaves() {
         // Clean up existing layers if there are some
         _waveLayers.forEach { $0.removeFromSuperlayer() }
         _waveLayers.removeAll()
@@ -114,56 +84,30 @@ class WavesLayer: CALayer {
         }
         
         // Draw new layers
-        for num in (0..<_numberOfWaves).reverse() {
+        for num in (0..<_numberOfWaves).reversed() {
             let calculatedRadius = CGFloat(num + 1) * _distanceBetweenWaves
-            let radius = calculatedRadius + (calculatedRadius * CGFloat(_sonarView.sonarViewLayout.waveRadiusOffset(_sonarView)))
+            let radius = calculatedRadius + (calculatedRadius * CGFloat(_sonarView.sonarViewLayout.waveRadiusOffset(sonarView: _sonarView)))
             let layer = self.circleWithRadius(radius: radius)
-            
-            let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
-            strokeAnimation.duration = 0.3
-            strokeAnimation.beginTime = CACurrentMediaTime() + Double(num) * 0.3
-            strokeAnimation.fromValue = 0.0
-            strokeAnimation.toValue = 1.0
-            strokeAnimation.removedOnCompletion = false
-            strokeAnimation.fillMode = kCAFillModeForwards
-            
-            layer.addAnimation(strokeAnimation, forKey: "strokeEnd")
-            
-            layer.strokeEnd = 0.0
-            
             layer.frame = self.bounds
             self.addSublayer(layer)
             _waveLayers.append(layer)
             
-            let gradientColors = [UIColor.whiteColor().CGColor, UIColor.whiteColor().CGColor, SonarView.lineShadowColor.CGColor]
+            let gradientColors = [UIColor.white.cgColor, UIColor.white.cgColor, SonarView.lineShadowColor.cgColor]
             let gradientSize = 1.0 - (18 / radius)
             let gradientLocations: [CGFloat] = [0.0, gradientSize, 1.0]
-            let gradient = RadialGradientLayer(frame: self.frame, radius: radius - 0.5, center: CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame)), colors: gradientColors, locations: gradientLocations)
-            
-            let displayAnimation = CABasicAnimation(keyPath: "opacity")
-            displayAnimation.duration = 0.3
-            displayAnimation.beginTime = CACurrentMediaTime() + Double(num) * 0.3
-            displayAnimation.fromValue = 0.0
-            displayAnimation.toValue = 1.0
-            displayAnimation.removedOnCompletion = false
-            displayAnimation.fillMode = kCAFillModeForwards
-            
-            gradient.addAnimation(displayAnimation, forKey: "opacity")
-            
-            gradient.opacity = 0.0
+            let gradient = RadialGradientLayer(frame: self.frame, radius: radius - 0.5, center: CGPoint(x: self.frame.width / 2, y: self.frame.height), colors: gradientColors, locations: gradientLocations)
             self.addSublayer(gradient)
             _waveLayers.append(gradient)
         }
-
     }
     
     private func calculateDistanceBetweenWaves() -> CGFloat {
-        return CGRectGetHeight(self.frame) / CGFloat((_numberOfWaves + 1))
+        return self.frame.height / CGFloat((_numberOfWaves + 1))
 
     }
     
     func circleAnglesForRadius(radius r: CGFloat) -> (startAngle: CGFloat, endAngle: CGFloat) {
-        let w = Double(CGRectGetWidth(self.frame))
+        let w = Double(self.frame.width)
         // Calculate angle α from equation b = 2a × cosα for isosceles triangle
         let b: Double = w < (Double(r) * 2) ? w : Double(r)
         let a = Double(r)
@@ -181,20 +125,20 @@ class WavesLayer: CALayer {
         return (startAngle: startRad, endAngle: endRad)
     }
     
-    private func circleWithRadius(radius r: CGFloat) -> CAShapeLayer {
+    private func circleWithRadius(radius r: CGFloat) -> CALayer {
         
         let circlePath = self.circleAnglesForRadius(radius: r)
-        let arcCenter = CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame))
+        let arcCenter = CGPoint(x: self.frame.width / 2, y: self.frame.height)
         
         let arc = UIBezierPath(arcCenter: arcCenter, radius: r, startAngle: circlePath.startAngle, endAngle: circlePath.endAngle, clockwise: true)
         let layer = CAShapeLayer()
 
-        layer.path = arc.CGPath
-        layer.strokeColor = SonarView.lineColor.CGColor
+        layer.path = arc.cgPath
+        layer.strokeColor = SonarView.lineColor.cgColor
         layer.frame = self.bounds
-        layer.fillColor = UIColor.whiteColor().CGColor
+        layer.fillColor = UIColor.white.cgColor
         layer.lineWidth = 1.5
-        layer.rasterizationScale = UIScreen.mainScreen().scale
+        layer.rasterizationScale = UIScreen.main.scale
         
         return layer
     }

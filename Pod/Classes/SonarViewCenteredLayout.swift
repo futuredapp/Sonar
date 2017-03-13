@@ -14,7 +14,7 @@ public protocol SonarViewCenteredLayoutDelegate: class {
 
 public class SonarViewCenteredLayout {
     public weak var delegate: SonarViewCenteredLayoutDelegate?
-    public var itemSize: CGSize = CGSizeMake(50, 50)
+    public var itemSize: CGSize = CGSize(width: 50, height: 50)
     public var segmentPadding: Double = 0.0
     public var edgeItemsShift: Double = 6.0
     public var waveRadiusOffset: Double = 0.0
@@ -24,14 +24,14 @@ extension SonarViewCenteredLayout: SonarViewLayout {
     
     public func sizeForItem(sonarView: SonarView, inWave waveIndex: Int, atIndex index: Int) -> CGSize {
         if let delegate = delegate {
-            return delegate.sizeForItem(sonarView, inWave: waveIndex, atIndex: index)
+            return delegate.sizeForItem(sonarView: sonarView, inWave: waveIndex, atIndex: index)
         } else {
             return itemSize
         }
     }
     
     public func positionForItem(sonarView: SonarView, inWave waveIndex: Int, atIndex index: Int) -> Double {
-        guard let numberOfItemsInWave = sonarView.dataSource?.sonarView(sonarView, numberOfItemForWaveIndex: waveIndex) else {
+        guard let numberOfItemsInWave = sonarView.dataSource?.sonarView(sonarView: sonarView, numberOfItemForWaveIndex: waveIndex) else {
             assertionFailure("*** SonarViewCenteredLayout: Missing DataSource!")
             return 0.0
         }

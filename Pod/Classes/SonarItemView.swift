@@ -13,6 +13,6 @@ public struct SonarPosition {
     let itemIndex: Int
 }
 
-public class SonarItemView: UIView {
+open class SonarItemView: UIView {
     var position: SonarPosition!
 }
