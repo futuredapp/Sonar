@@ -5,7 +5,6 @@
 //  Created by Aleš Kocur on 01/01/16.
 //  Copyright © 2016 Aleš Kocur. All rights reserved.
 //
-
 import UIKit
 
 enum WavesLayerError: Error {
@@ -14,7 +13,7 @@ enum WavesLayerError: Error {
 
 extension CGFloat {
     func toDegrees() -> CGFloat {
-        return self * (180.0 / CGFloat(M_PI))
+        return self * (180.0 / CGFloat(Double.pi))
     }
 }
 
@@ -32,7 +31,7 @@ class WavesLayer: CALayer {
         super.init()
         self.frame = frame
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -72,6 +71,36 @@ class WavesLayer: CALayer {
     
     private func drawWaves() {
         
+        CATransaction.begin()
+        
+        CATransaction.setCompletionBlock {
+            self._drawWaves()
+        }
+        
+        _waveLayers.forEach {layer in
+            let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
+            strokeAnimation.duration = 0.3
+            strokeAnimation.fromValue = 1.0
+            strokeAnimation.toValue = 0.0
+            strokeAnimation.isRemovedOnCompletion = false
+            strokeAnimation.fillMode = kCAFillModeForwards
+            layer.add(strokeAnimation, forKey: "strokeEnd")
+            
+            if let layer = layer as? RadialGradientLayer {
+                let displayAnimation = CABasicAnimation(keyPath: "opacity")
+                displayAnimation.duration = 0.3
+                displayAnimation.fromValue = 1.0
+                displayAnimation.toValue = 0.0
+                displayAnimation.isRemovedOnCompletion = false
+                displayAnimation.fillMode = kCAFillModeForwards
+                layer.add(displayAnimation, forKey: "opacity")
+            }
+        }
+        
+        CATransaction.commit()
+    }
+    
+    private func _drawWaves() {
         // Clean up existing layers if there are some
         _waveLayers.forEach { $0.removeFromSuperlayer() }
         _waveLayers.removeAll()
@@ -88,6 +117,19 @@ class WavesLayer: CALayer {
             let calculatedRadius = CGFloat(num + 1) * _distanceBetweenWaves
             let radius = calculatedRadius + (calculatedRadius * CGFloat(_sonarView.sonarViewLayout.waveRadiusOffset(sonarView: _sonarView)))
             let layer = self.circleWithRadius(radius: radius)
+            
+            let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
+            strokeAnimation.duration = 0.3
+            strokeAnimation.beginTime = CACurrentMediaTime() + Double(num) * 0.3
+            strokeAnimation.fromValue = 0.0
+            strokeAnimation.toValue = 1.0
+            strokeAnimation.isRemovedOnCompletion = false
+            strokeAnimation.fillMode = kCAFillModeForwards
+            
+            layer.add(strokeAnimation, forKey: "strokeEnd")
+            
+            layer.strokeEnd = 0.0
+            
             layer.frame = self.bounds
             self.addSublayer(layer)
             _waveLayers.append(layer)
@@ -96,14 +138,27 @@ class WavesLayer: CALayer {
             let gradientSize = 1.0 - (18 / radius)
             let gradientLocations: [CGFloat] = [0.0, gradientSize, 1.0]
             let gradient = RadialGradientLayer(frame: self.frame, radius: radius - 0.5, center: CGPoint(x: self.frame.width / 2, y: self.frame.height), colors: gradientColors, locations: gradientLocations)
+            
+            let displayAnimation = CABasicAnimation(keyPath: "opacity")
+            displayAnimation.duration = 0.3
+            displayAnimation.beginTime = CACurrentMediaTime() + Double(num) * 0.3
+            displayAnimation.fromValue = 0.0
+            displayAnimation.toValue = 1.0
+            displayAnimation.isRemovedOnCompletion = false
+            displayAnimation.fillMode = kCAFillModeForwards
+            
+            gradient.add(displayAnimation, forKey: "opacity")
+            
+            gradient.opacity = 0.0
             self.addSublayer(gradient)
             _waveLayers.append(gradient)
         }
+        
     }
     
     private func calculateDistanceBetweenWaves() -> CGFloat {
         return self.frame.height / CGFloat((_numberOfWaves + 1))
-
+        
     }
     
     func circleAnglesForRadius(radius r: CGFloat) -> (startAngle: CGFloat, endAngle: CGFloat) {
@@ -113,26 +168,26 @@ class WavesLayer: CALayer {
         let a = Double(r)
         let alpha = acos(b / (2 * a))
         
-        let beta = M_PI - (Double(alpha) * 2)
+        let beta = Double.pi - (Double(alpha) * 2)
         
         // Add up half of computed angle to either side from the top of arc (3/2⫪)
         let halfOfBeta = beta / 2
-        let M_3_2_PI: Double = (3 / 2) * M_PI // just a 3/2⫪ constant
+        let M_3_2_PI: Double = (3 / 2) * Double.pi // just a 3/2⫪ constant
         // TODO: The rounding is ugly!!!
-        let startRad = Double(round(1000 * alpha) / 1000) == Double(round(1000 * beta) / 1000) ? CGFloat(M_PI) : CGFloat(M_3_2_PI - halfOfBeta)
-        let endRad = Double(round(1000 * alpha) / 1000) == Double(round(1000 * beta) / 1000) ? CGFloat(2 * M_PI) : CGFloat(M_3_2_PI + halfOfBeta)
+        let startRad = Double(round(1000 * alpha) / 1000) == Double(round(1000 * beta) / 1000) ? CGFloat(Double.pi) : CGFloat(M_3_2_PI - halfOfBeta)
+        let endRad = Double(round(1000 * alpha) / 1000) == Double(round(1000 * beta) / 1000) ? CGFloat(2 * Double.pi) : CGFloat(M_3_2_PI + halfOfBeta)
         
         return (startAngle: startRad, endAngle: endRad)
     }
     
-    private func circleWithRadius(radius r: CGFloat) -> CALayer {
+    private func circleWithRadius(radius r: CGFloat) -> CAShapeLayer {
         
         let circlePath = self.circleAnglesForRadius(radius: r)
         let arcCenter = CGPoint(x: self.frame.width / 2, y: self.frame.height)
         
         let arc = UIBezierPath(arcCenter: arcCenter, radius: r, startAngle: circlePath.startAngle, endAngle: circlePath.endAngle, clockwise: true)
         let layer = CAShapeLayer()
-
+        
         layer.path = arc.cgPath
         layer.strokeColor = SonarView.lineColor.cgColor
         layer.frame = self.bounds
@@ -153,5 +208,3 @@ class WavesLayer: CALayer {
     
     
 }
-
-

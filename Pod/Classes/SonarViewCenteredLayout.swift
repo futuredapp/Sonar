@@ -5,8 +5,8 @@
 //  Created by Aleš Kocur on 15/01/16.
 //
 //
-
 import Foundation
+import UIKit
 
 public protocol SonarViewCenteredLayoutDelegate: class {
     func sizeForItem(sonarView: SonarView, inWave waveIndex: Int, atIndex index: Int) -> CGSize
@@ -53,7 +53,7 @@ extension SonarViewCenteredLayout: SonarViewLayout {
         
         return (Double(index + 1) / Double(numberOfItemsInWave + 1))
     }
-  
+    
     public func positionForWaveLabel(sonarView: SonarView, inWave waveIndex: Int) -> Double {
         return 0.5
     }

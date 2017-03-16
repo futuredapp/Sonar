@@ -5,7 +5,7 @@
 //  Created by Aleš Kocur on 15/01/16.
 //
 //
-
+import UIKit
 public protocol SonarViewLayout {
     
     /**
@@ -43,7 +43,7 @@ public protocol SonarViewLayout {
     
     func positionForWaveLabel(sonarView: SonarView, inWave waveIndex: Int) -> Double
     
-    /** 
+    /**
      Offset for waves
      
      @param sonarView SonarView which is being layouted
