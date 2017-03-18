@@ -21,7 +21,7 @@ public class SonarViewCenteredLayout {
 }
 
 extension SonarViewCenteredLayout: SonarViewLayout {
-    
+
     public func sizeForItem(sonarView: SonarView, inWave waveIndex: Int, atIndex index: Int) -> CGSize {
         if let delegate = delegate {
             return delegate.sizeForItem(sonarView: sonarView, inWave: waveIndex, atIndex: index)
@@ -29,19 +29,19 @@ extension SonarViewCenteredLayout: SonarViewLayout {
             return itemSize
         }
     }
-    
+
     public func positionForItem(sonarView: SonarView, inWave waveIndex: Int, atIndex index: Int) -> Double {
         guard let numberOfItemsInWave = sonarView.dataSource?.sonarView(sonarView: sonarView, numberOfItemForWaveIndex: waveIndex) else {
             assertionFailure("*** SonarViewCenteredLayout: Missing DataSource!")
             return 0.0
         }
-        
+
         if numberOfItemsInWave % 2 == 0 {
-            
+
             let fullSegmentSize: Double = 100.0 // Just a value that represents 100%
             let segmentSize = (fullSegmentSize / Double(numberOfItemsInWave + 1)) + segmentPadding
             let padding: Double = segmentSize - edgeItemsShift
-            
+
             if index % 2 == 0 {
                 let size = (padding + (Double(index / 2) * segmentSize))
                 return size / fullSegmentSize
@@ -50,15 +50,15 @@ extension SonarViewCenteredLayout: SonarViewLayout {
                 return size / fullSegmentSize
             }
         }
-        
+
         return (Double(index + 1) / Double(numberOfItemsInWave + 1))
     }
-    
-    public func positionForWaveLabel(sonarView: SonarView, inWave waveIndex: Int) -> Double {
+
+    public func positionForWaveLabel(sonarView _: SonarView, inWave _: Int) -> Double {
         return 0.5
     }
-    
-    public func waveRadiusOffset(sonarView: SonarView) -> Double {
+
+    public func waveRadiusOffset(sonarView _: SonarView) -> Double {
         return waveRadiusOffset
     }
 }
