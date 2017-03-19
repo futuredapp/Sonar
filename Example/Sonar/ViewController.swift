@@ -14,7 +14,7 @@ import MapKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var sonarView: SonarView!
-    private lazy var distanceFormatter: MKDistanceFormatter = MKDistanceFormatter()
+    fileprivate lazy var distanceFormatter: MKDistanceFormatter = MKDistanceFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func reloadData(sender: AnyObject) {
+    @IBAction func reloadData(_ sender: AnyObject) {
         sonarView.reloadData()
     }
 }
@@ -63,13 +63,13 @@ extension ViewController: SonarViewDataSource {
     
     // MARK: - Helpers
     
-    private func randomAvatar() -> UIImage {
+    fileprivate func randomAvatar() -> UIImage {
         let index = arc4random_uniform(3) + 1
         return UIImage(named: "avatar\(index)")!
     }
     
-    private func newItemView() -> TestSonarItemView {
-        return NSBundle.mainBundle().loadNibNamed("TestSonarItemView", owner: self, options: nil).first as! TestSonarItemView
+    fileprivate func newItemView() -> TestSonarItemView {
+        return Bundle.main.loadNibNamed("TestSonarItemView", owner: self, options: nil)!.first as! TestSonarItemView
     }
 }
 
@@ -79,8 +79,9 @@ extension ViewController: SonarViewDelegate {
     }
     
     func sonarView(sonarView: SonarView, textForWaveAtIndex waveIndex: Int) -> String? {
-        if self.sonarView(sonarView, numberOfItemForWaveIndex: waveIndex) % 2 == 0 {
-            return self.distanceFormatter.stringFromDistance(100.0 * Double(waveIndex + 1))
+        
+        if self.sonarView(sonarView: sonarView, numberOfItemForWaveIndex: waveIndex) % 2 == 0 {
+            return self.distanceFormatter.string(fromDistance: 100.0 * Double(waveIndex + 1))
         } else {
             return nil
         }
@@ -88,7 +89,7 @@ extension ViewController: SonarViewDelegate {
 }
 
 
-func delay(delay: Double, closure: Void -> Void) {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), closure)
+func delay(_ delay: Double, closure: @escaping (Void) -> Void) {
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
 }
 

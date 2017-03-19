@@ -1,12 +1,15 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'Sonar_Example', :exclusive => true do
-  pod "Sonar", :path => "../"
-end
+platform :ios, '9.0'
+inhibit_all_warnings!
 
-target 'Sonar_Tests', :exclusive => true do
-  pod "Sonar", :path => "../"
+project 'Sonar'
 
-  
+target 'Sonar_Example' do
+  pod "Sonar", :path => "../"
+end.
+
+target 'Sonar_Tests' do
+  pod "Sonar", :path => "../"
 end

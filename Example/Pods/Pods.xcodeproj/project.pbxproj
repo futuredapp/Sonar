@@ -1,1863 +1,855 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>01BA97615EABABFE220C34A0770A7A0D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E4E89230EF59BC255123B67864ACF77</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>044FB49BDF385FEE75C47DA57DBE3766</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>82ADC642D07B48515926AB35FC66C6EF</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-Sonar_Tests/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-Sonar_Tests/Pods-Sonar_Tests.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_Sonar_Tests</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>059731EF39E90F1D05AD74A9D489382C</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>DB37BD5D84D086B8899C79C193D0BEE9</string>
-			<key>remoteInfo</key>
-			<string>Sonar</string>
-		</dict>
-		<key>0BDC4E08ADFF1D566DB8C7040E714A05</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>0CBB29D6FDCF85AD9A53169753036A31</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E1DCDAAA582B80C3D380110AF980BC8C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>0D54643751389FDDB1755BFF82D37C96</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4ECA94B74DE61909B0D98391EEF96FFE</string>
-				<string>4005866B39D9C8521BC44C0287F73D42</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Sonar</string>
-			<key>path</key>
-			<string>../..</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>10DE1947DAC0ED28F6C0A9F9BD75D546</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>10FD74BD01F15457C7D61DD098D00963</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-Sonar_Tests-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1254302813B390100550964EDCF420C7</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>81394A2A54E9F00B82A9C4F9D6892867</string>
-			<key>buildPhases</key>
-			<array>
-				<string>A3035FE0AA6D3920E8953A56DB96AB5A</string>
-				<string>DFE4915277A708A073B518CDFA2A19D8</string>
-				<string>E86B3F0D19ECE83731DD5C39DFB32BB7</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>5CC3D4E0D7529B27303C9909BFF2B3B2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-Sonar_Tests</string>
-			<key>productName</key>
-			<string>Pods-Sonar_Tests</string>
-			<key>productReference</key>
-			<string>488E25018784018A351F5376D23950D0</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>17B110E0353621CBABE79F1C2363BB87</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Sonar</string>
-			<key>target</key>
-			<string>DB37BD5D84D086B8899C79C193D0BEE9</string>
-			<key>targetProxy</key>
-			<string>059731EF39E90F1D05AD74A9D489382C</string>
-		</dict>
-		<key>195E4B51FB5D2C000C893F6D65E82ED3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Sonar.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1B5C80DFFDFD9741F0E6D47394A47AF6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9ABCF73E4C83D48AB413B7CCC98ACE8A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1BE6F803F61C62C875C8688E32251ED1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Sonar_Example.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1C67A8D4BC935246CA312A30BB8269ED</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>64794BA1864C43820C39A4D08482BE6D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>1CD88B7CFC93F01FA2E8DD9B5CCA2548</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>78A5CF00125A9A87B039A6969BB1B6DE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Sonar/Sonar-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Sonar/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Sonar/Sonar.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>Sonar</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>1DD292F266D8CB4E9B75B1921BD593C6</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>0D54643751389FDDB1755BFF82D37C96</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Development Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1F2FE21A446E468D531C975A9C2E8781</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>1CD88B7CFC93F01FA2E8DD9B5CCA2548</string>
-				<string>5E080C9A576A4137F4F32AD098B18EBB</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>1F309D56E40E9071043212C2090B02AC</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>DB37BD5D84D086B8899C79C193D0BEE9</string>
-			<key>remoteInfo</key>
-			<string>Sonar</string>
-		</dict>
-		<key>2024B0FCC9646A8917E67F6710A6E9C8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>20F4D0811DC3566478609EA856F09F38</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>81794FCD8E38DE3277C5A387CE87F46F</string>
-			<key>buildPhases</key>
-			<array>
-				<string>E78D844E8754CEC3E67318C66D869638</string>
-				<string>855CB0999E0F0A85246187B5A691A882</string>
-				<string>8CFD75F130C2DD9594D5499D033D5A6E</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>17B110E0353621CBABE79F1C2363BB87</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-Sonar_Example</string>
-			<key>productName</key>
-			<string>Pods-Sonar_Example</string>
-			<key>productReference</key>
-			<string>E3D599E92F509C91180C92305FB89DCE</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>231AC88622B5A8E4831E0F9B7A8D4C25</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D3C038662EC70F64EB31E023ADC80E60</string>
-				<string>5749B354A367ED5B293C157FCFECADF0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>25A25C2014E39A9221FA85678C2DC8BA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>9CCEB4AD83EE67D4F79F406D8E02C980</string>
-				<string>841C59D0F33EE8B65DBAE90B0B7FEE78</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>552D02D5BA751AC2E8790D2811D496CA</string>
-				<string>10DE1947DAC0ED28F6C0A9F9BD75D546</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>36B4CA6D35583418548EBDB9FF7D1A7F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>1BE6F803F61C62C875C8688E32251ED1</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-Sonar_Example/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-Sonar_Example/Pods-Sonar_Example.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_Sonar_Example</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>384341D6AC57E6289D230C96BF538A99</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BF5604CE6AEA41CAEEAD1E94BC2B166F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3E4E89230EF59BC255123B67864ACF77</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>4005866B39D9C8521BC44C0287F73D42</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FFD83B68F832A762BBD99006224BDE26</string>
-				<string>195E4B51FB5D2C000C893F6D65E82ED3</string>
-				<string>78A5CF00125A9A87B039A6969BB1B6DE</string>
-				<string>F346ECF7249AF8212B7DB5A9FA2515F4</string>
-				<string>5BE68E1BE2DC327470650B9CA526D573</string>
-				<string>96855654F7F9D55EEBF9FD8D485624AA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>Example/Pods/Target Support Files/Sonar</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>488E25018784018A351F5376D23950D0</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_Sonar_Tests.framework</string>
-			<key>path</key>
-			<string>Pods_Sonar_Tests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>49EA265BFB301173B7E816285225258B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4ECA94B74DE61909B0D98391EEF96FFE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D78EDA931D404C7D8AF08B8CCF926970</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pod</string>
-			<key>path</key>
-			<string>Pod</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>509A859DF5DE7D9CD3D43A143C79005A</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>25A25C2014E39A9221FA85678C2DC8BA</string>
-			<key>buildPhases</key>
-			<array>
-				<string>0BDC4E08ADFF1D566DB8C7040E714A05</string>
-				<string>2024B0FCC9646A8917E67F6710A6E9C8</string>
-				<string>CFAAE6B3477D221D1EADF84EBB6F54B0</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Sonar-Sonar</string>
-			<key>productName</key>
-			<string>Sonar-Sonar</string>
-			<key>productReference</key>
-			<string>94D3D41423BFCB4310979BF81EF70F19</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle</string>
-		</dict>
-		<key>528461E6BC59BE539B3F9C8EA4559EDF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-Sonar_Example-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>552D02D5BA751AC2E8790D2811D496CA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5749B354A367ED5B293C157FCFECADF0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>49EA265BFB301173B7E816285225258B</string>
-				<string>C3EFF6B14B6C3876B506D46FDCD434E3</string>
-				<string>B90C13E3C97141F29CF2E3C2E11B2B7E</string>
-				<string>10FD74BD01F15457C7D61DD098D00963</string>
-				<string>7C00127E0D8028EF1EDD925A01838D0C</string>
-				<string>9959090F01336168449C75640F51480D</string>
-				<string>991AD60D303F4E6A53C35D85A3BE5C7E</string>
-				<string>6FD26228897A7B1F6C4AD82915C92E0D</string>
-				<string>82ADC642D07B48515926AB35FC66C6EF</string>
-				<string>A4A2CCBA26D87FEB96EA83A08E466DFA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-Sonar_Tests</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-Sonar_Tests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>586889FA4B6767B5ED7BFB2C03B3014C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E4E89230EF59BC255123B67864ACF77</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5BE68E1BE2DC327470650B9CA526D573</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Sonar-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5CC3D4E0D7529B27303C9909BFF2B3B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Sonar</string>
-			<key>target</key>
-			<string>DB37BD5D84D086B8899C79C193D0BEE9</string>
-			<key>targetProxy</key>
-			<string>1F309D56E40E9071043212C2090B02AC</string>
-		</dict>
-		<key>5CED4D2D84EDCBC56A02363F626AB68D</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>DB5B7563DF85D8B3569583BD5B2EE2DF</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-Sonar_Example/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-Sonar_Example/Pods-Sonar_Example.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_Sonar_Example</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5E080C9A576A4137F4F32AD098B18EBB</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>78A5CF00125A9A87B039A6969BB1B6DE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Sonar/Sonar-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Sonar/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Sonar/Sonar.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>Sonar</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>6128431509C2B1DDAD78A4D7DB3C0061</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6C519B358B54DD11813964B413BF46E1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>64794BA1864C43820C39A4D08482BE6D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>96855654F7F9D55EEBF9FD8D485624AA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>65DD9026A0D47FD1F0F5BF4AD4FB5565</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SonarViewCenteredLayout.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6C519B358B54DD11813964B413BF46E1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SonarViewLayout.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6FD26228897A7B1F6C4AD82915C92E0D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-Sonar_Tests-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>75750D1E4D37A8B6BCEB4177C49CC666</key>
-		<dict>
-			<key>fileRef</key>
-			<string>94D3D41423BFCB4310979BF81EF70F19</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>78A5CF00125A9A87B039A6969BB1B6DE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Sonar.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7C00127E0D8028EF1EDD925A01838D0C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-Sonar_Tests-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>1DD292F266D8CB4E9B75B1921BD593C6</string>
-				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
-				<string>B4374DBF2DBE18AD35062C4A7D640E2E</string>
-				<string>231AC88622B5A8E4831E0F9B7A8D4C25</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>81394A2A54E9F00B82A9C4F9D6892867</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>044FB49BDF385FEE75C47DA57DBE3766</string>
-				<string>A6F78C777A2EDB55880A3F05AD8CEDFE</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>81794FCD8E38DE3277C5A387CE87F46F</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5CED4D2D84EDCBC56A02363F626AB68D</string>
-				<string>36B4CA6D35583418548EBDB9FF7D1A7F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>82ADC642D07B48515926AB35FC66C6EF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Sonar_Tests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>841C59D0F33EE8B65DBAE90B0B7FEE78</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>78A5CF00125A9A87B039A6969BB1B6DE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>Sonar</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>bundle</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>852E3BCD32DACEE46B015099ADFEC0A0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>65DD9026A0D47FD1F0F5BF4AD4FB5565</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>855CB0999E0F0A85246187B5A691A882</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>01BA97615EABABFE220C34A0770A7A0D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8C9FC4832FFA3D8A46560D21D827F3E4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DBC76FD8BB6756E6523DA14E1C4ADA3F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8CFD75F130C2DD9594D5499D033D5A6E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>0CBB29D6FDCF85AD9A53169753036A31</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8D4ED5CCA416BC3F30EB052D5CF7FAA3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F346ECF7249AF8212B7DB5A9FA2515F4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8EB4BA791E5AAA3BC7F1633CCC6E8631</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Sonar-Sonar</string>
-			<key>target</key>
-			<string>509A859DF5DE7D9CD3D43A143C79005A</string>
-			<key>targetProxy</key>
-			<string>CF23CB11C1E8BDD955442691B8EBE8E9</string>
-		</dict>
-		<key>8EC821A224DB57D2A564EAAF815CCF65</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>75750D1E4D37A8B6BCEB4177C49CC666</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>92F3E569D0765596685DB96111E2A8CA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-Sonar_Example.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>94D3D41423BFCB4310979BF81EF70F19</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Sonar.bundle</string>
-			<key>path</key>
-			<string>Sonar.bundle</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>96855654F7F9D55EEBF9FD8D485624AA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Sonar-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>991AD60D303F4E6A53C35D85A3BE5C7E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-Sonar_Tests-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9959090F01336168449C75640F51480D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-Sonar_Tests-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9ABCF73E4C83D48AB413B7CCC98ACE8A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SonarItemView.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9CCEB4AD83EE67D4F79F406D8E02C980</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>78A5CF00125A9A87B039A6969BB1B6DE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>Sonar</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>bundle</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>A10B65F3F301FC3E0DA304599E36C9C5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-Sonar_Example-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3035FE0AA6D3920E8953A56DB96AB5A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E177FA0507DEE26BE6875FCF10BCAAD5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A4A2CCBA26D87FEB96EA83A08E466DFA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Sonar_Tests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A6F78C777A2EDB55880A3F05AD8CEDFE</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A4A2CCBA26D87FEB96EA83A08E466DFA</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-Sonar_Tests/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-Sonar_Tests/Pods-Sonar_Tests.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_Sonar_Tests</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>A9537A2EECC13A17B9826B8390FA8635</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B1E683FA8494AA1A4FB36BE13CDEF772</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B1E683FA8494AA1A4FB36BE13CDEF772</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>RadialGradienLayer.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B2F2B234AF18239C8AC1002319F08E59</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A9537A2EECC13A17B9826B8390FA8635</string>
-				<string>8D4ED5CCA416BC3F30EB052D5CF7FAA3</string>
-				<string>1B5C80DFFDFD9741F0E6D47394A47AF6</string>
-				<string>BA8222CECD008AA0534FC9305DC1FC13</string>
-				<string>852E3BCD32DACEE46B015099ADFEC0A0</string>
-				<string>6128431509C2B1DDAD78A4D7DB3C0061</string>
-				<string>384341D6AC57E6289D230C96BF538A99</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B4374DBF2DBE18AD35062C4A7D640E2E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E3D599E92F509C91180C92305FB89DCE</string>
-				<string>488E25018784018A351F5376D23950D0</string>
-				<string>94D3D41423BFCB4310979BF81EF70F19</string>
-				<string>C823267E1D37C8DF89387FBE46C24EFC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B90C13E3C97141F29CF2E3C2E11B2B7E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-Sonar_Tests-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>BA8222CECD008AA0534FC9305DC1FC13</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FE222EB55942F8AEE2487747F1D8ECF9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BC3CA7F9E30CC8F7E2DD044DD34432FC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BF6342C8B29F4CEEA088EFF7AB4DE362</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF5604CE6AEA41CAEEAD1E94BC2B166F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>WavesLayer.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF6342C8B29F4CEEA088EFF7AB4DE362</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3E4E89230EF59BC255123B67864ACF77</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C3EFF6B14B6C3876B506D46FDCD434E3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-Sonar_Tests.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7438D812FAC2CECDBEFD9B2C618F2DB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-Sonar_Example-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C823267E1D37C8DF89387FBE46C24EFC</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Sonar.framework</string>
-			<key>path</key>
-			<string>Sonar.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>CF23CB11C1E8BDD955442691B8EBE8E9</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>509A859DF5DE7D9CD3D43A143C79005A</string>
-			<key>remoteInfo</key>
-			<string>Sonar-Sonar</string>
-		</dict>
-		<key>CFAAE6B3477D221D1EADF84EBB6F54B0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D3C038662EC70F64EB31E023ADC80E60</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EDC66B94F3E1D2D9C05A8176370F075D</string>
-				<string>92F3E569D0765596685DB96111E2A8CA</string>
-				<string>A10B65F3F301FC3E0DA304599E36C9C5</string>
-				<string>DB661ED8FD5EB77C98BA9CA71D07A943</string>
-				<string>C7438D812FAC2CECDBEFD9B2C618F2DB</string>
-				<string>D60C597388F847AEBCBE55B6D235EE2F</string>
-				<string>528461E6BC59BE539B3F9C8EA4559EDF</string>
-				<string>E1DCDAAA582B80C3D380110AF980BC8C</string>
-				<string>DB5B7563DF85D8B3569583BD5B2EE2DF</string>
-				<string>1BE6F803F61C62C875C8688E32251ED1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-Sonar_Example</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-Sonar_Example</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D41D8CD98F00B204E9800998ECF8427E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0700</string>
-				<key>LastUpgradeCheck</key>
-				<string>0700</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7DB346D0F39D3F0E887471402A8071AB</string>
-			<key>productRefGroup</key>
-			<string>B4374DBF2DBE18AD35062C4A7D640E2E</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>20F4D0811DC3566478609EA856F09F38</string>
-				<string>1254302813B390100550964EDCF420C7</string>
-				<string>DB37BD5D84D086B8899C79C193D0BEE9</string>
-				<string>509A859DF5DE7D9CD3D43A143C79005A</string>
-			</array>
-		</dict>
-		<key>D60C597388F847AEBCBE55B6D235EE2F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-Sonar_Example-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D78EDA931D404C7D8AF08B8CCF926970</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B1E683FA8494AA1A4FB36BE13CDEF772</string>
-				<string>9ABCF73E4C83D48AB413B7CCC98ACE8A</string>
-				<string>FE222EB55942F8AEE2487747F1D8ECF9</string>
-				<string>65DD9026A0D47FD1F0F5BF4AD4FB5565</string>
-				<string>6C519B358B54DD11813964B413BF46E1</string>
-				<string>BF5604CE6AEA41CAEEAD1E94BC2B166F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Classes</string>
-			<key>path</key>
-			<string>Classes</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DB37BD5D84D086B8899C79C193D0BEE9</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>1F2FE21A446E468D531C975A9C2E8781</string>
-			<key>buildPhases</key>
-			<array>
-				<string>B2F2B234AF18239C8AC1002319F08E59</string>
-				<string>8C9FC4832FFA3D8A46560D21D827F3E4</string>
-				<string>8EC821A224DB57D2A564EAAF815CCF65</string>
-				<string>1C67A8D4BC935246CA312A30BB8269ED</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>8EB4BA791E5AAA3BC7F1633CCC6E8631</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Sonar</string>
-			<key>productName</key>
-			<string>Sonar</string>
-			<key>productReference</key>
-			<string>C823267E1D37C8DF89387FBE46C24EFC</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>DB5B7563DF85D8B3569583BD5B2EE2DF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Sonar_Example.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DB661ED8FD5EB77C98BA9CA71D07A943</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-Sonar_Example-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBC76FD8BB6756E6523DA14E1C4ADA3F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E4E89230EF59BC255123B67864ACF77</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DF0AA4ADFBA10CD40B53BB1861398E3A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6FD26228897A7B1F6C4AD82915C92E0D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>DFE4915277A708A073B518CDFA2A19D8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>586889FA4B6767B5ED7BFB2C03B3014C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E177FA0507DEE26BE6875FCF10BCAAD5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7C00127E0D8028EF1EDD925A01838D0C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E1DCDAAA582B80C3D380110AF980BC8C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-Sonar_Example-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E3D599E92F509C91180C92305FB89DCE</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_Sonar_Example.framework</string>
-			<key>path</key>
-			<string>Pods_Sonar_Example.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>E78D844E8754CEC3E67318C66D869638</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EF8E0B081AB13C96E955778C8D921D1D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E86B3F0D19ECE83731DD5C39DFB32BB7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DF0AA4ADFBA10CD40B53BB1861398E3A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EDC66B94F3E1D2D9C05A8176370F075D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EF8E0B081AB13C96E955778C8D921D1D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7438D812FAC2CECDBEFD9B2C618F2DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F346ECF7249AF8212B7DB5A9FA2515F4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Sonar-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FE222EB55942F8AEE2487747F1D8ECF9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SonarView.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FFD83B68F832A762BBD99006224BDE26</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>D41D8CD98F00B204E9800998ECF8427E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14210E795773FF07B7C5528B4860C1E9 /* SonarViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C11F74645C171B84E3FC5A2A1BC3FC /* SonarViewLayout.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1951449FD96D033FAD92815F7AB52E51 /* Sonar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 60562D32C1B5853244BE047BBA67BB13 /* Sonar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30DC84E7B9846DD0CF19E9E1A041C9E5 /* Pods-Sonar_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD26228897A7B1F6C4AD82915C92E0D /* Pods-Sonar_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B675B6CF6B383FE9EE4C8942B29B03F /* Sonar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6CB0963C60BE39145D77326BEE9FAC12 /* Sonar.bundle */; };
+		5AB8FEAA6CE67F9B773E831C6C2321D9 /* RadialGradienLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7ED6E6377227B6C5AA64E444886E84 /* RadialGradienLayer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5BCDF04890189EAB67A2FB89EAC490FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		652690D96C48D4B3F696CB1C1E332A92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		83AB501CA22FB4991B6769DF92595F35 /* SonarViewCenteredLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFCFD170AF064BA08F9532C0CF90CA8 /* SonarViewCenteredLayout.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9B5D3504B33789B6F90A518E2025753F /* Sonar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC8EA690007059E7B07A93C7BEC3102 /* Sonar-dummy.m */; };
+		A44FD8503C900AEDB65A64F2D606763D /* WavesLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6983E36981A83AB5CB89BAA79430397 /* WavesLayer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A74509C591E1B9FF56EF085D61E9A030 /* Pods-Sonar_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1DCDAAA582B80C3D380110AF980BC8C /* Pods-Sonar_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9137E826F31E7B9FE04B22A33B8D86E /* SonarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316C8DC97B5557F8A499FBAC864D9237 /* SonarItemView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D31B713466EA046F241CB6CAFF5B5C3A /* Pods-Sonar_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C00127E0D8028EF1EDD925A01838D0C /* Pods-Sonar_Tests-dummy.m */; };
+		DC00BC3EFB594131951864FCA4A83C7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		ED60FF280419AC9E50F7040F1140EA5A /* Pods-Sonar_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7438D812FAC2CECDBEFD9B2C618F2DB /* Pods-Sonar_Example-dummy.m */; };
+		F58D8EEB7C5BE98C4E4CB9D3600D9DEA /* SonarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E036B93033A5AECCEEA0E52C19A449E /* SonarView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8CC64B296F64FE7061B05410A62628B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8072D5423CA9B86A7BF36F383EBB392;
+			remoteInfo = Sonar;
+		};
+		92A6D8E0D9C7C6FF20AC537B1AC96C6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC38E44FF6666332338134EAB206942D;
+			remoteInfo = "Sonar-Sonar";
+		};
+		BC08B75329987461FF80CE73FD8E377A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8072D5423CA9B86A7BF36F383EBB392;
+			remoteInfo = Sonar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09C601765D328A64ED51B35229B6929D /* ResourceBundle-Sonar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Sonar-Info.plist"; sourceTree = "<group>"; };
+		0C57FB6503069328BE03B5C1D6E1BBCE /* Sonar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Sonar.modulemap; sourceTree = "<group>"; };
+		10FD74BD01F15457C7D61DD098D00963 /* Pods-Sonar_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sonar_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1BE6F803F61C62C875C8688E32251ED1 /* Pods-Sonar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sonar_Example.release.xcconfig"; sourceTree = "<group>"; };
+		1F7ED6E6377227B6C5AA64E444886E84 /* RadialGradienLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RadialGradienLayer.swift; sourceTree = "<group>"; };
+		213113D80897EB88F6902931E44032AC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		316C8DC97B5557F8A499FBAC864D9237 /* SonarItemView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SonarItemView.swift; sourceTree = "<group>"; };
+		34325C619E34EE6997CA92B545AA17A2 /* Sonar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Sonar.framework; path = Sonar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E2B9C6CD29D9F8A0ED3624A6533CF58 /* Sonar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Sonar.xcconfig; sourceTree = "<group>"; };
+		438824386347E714BB8C2B08C82C0ABD /* Pods_Sonar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Sonar_Tests.framework; path = "Pods-Sonar_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49EA265BFB301173B7E816285225258B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DFCFD170AF064BA08F9532C0CF90CA8 /* SonarViewCenteredLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SonarViewCenteredLayout.swift; sourceTree = "<group>"; };
+		528461E6BC59BE539B3F9C8EA4559EDF /* Pods-Sonar_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sonar_Example-resources.sh"; sourceTree = "<group>"; };
+		57C11F74645C171B84E3FC5A2A1BC3FC /* SonarViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SonarViewLayout.swift; sourceTree = "<group>"; };
+		60562D32C1B5853244BE047BBA67BB13 /* Sonar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Sonar-umbrella.h"; sourceTree = "<group>"; };
+		6CB0963C60BE39145D77326BEE9FAC12 /* Sonar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Sonar.bundle; path = Sonar.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3A97D2301B5BD4D7CE1BD2B88FF6F9 /* Pods_Sonar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Sonar_Example.framework; path = "Pods-Sonar_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FC8EA690007059E7B07A93C7BEC3102 /* Sonar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Sonar-dummy.m"; sourceTree = "<group>"; };
+		6FD26228897A7B1F6C4AD82915C92E0D /* Pods-Sonar_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sonar_Tests-umbrella.h"; sourceTree = "<group>"; };
+		7C00127E0D8028EF1EDD925A01838D0C /* Pods-Sonar_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sonar_Tests-dummy.m"; sourceTree = "<group>"; };
+		82ADC642D07B48515926AB35FC66C6EF /* Pods-Sonar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sonar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		92F3E569D0765596685DB96111E2A8CA /* Pods-Sonar_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Sonar_Example.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		991AD60D303F4E6A53C35D85A3BE5C7E /* Pods-Sonar_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sonar_Tests-resources.sh"; sourceTree = "<group>"; };
+		9959090F01336168449C75640F51480D /* Pods-Sonar_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sonar_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		9E036B93033A5AECCEEA0E52C19A449E /* SonarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SonarView.swift; sourceTree = "<group>"; };
+		A10B65F3F301FC3E0DA304599E36C9C5 /* Pods-Sonar_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sonar_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A4A2CCBA26D87FEB96EA83A08E466DFA /* Pods-Sonar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sonar_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B90C13E3C97141F29CF2E3C2E11B2B7E /* Pods-Sonar_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sonar_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BFEE17255C35BD12458B07CEBF48D3EE /* Sonar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Sonar-prefix.pch"; sourceTree = "<group>"; };
+		C3EFF6B14B6C3876B506D46FDCD434E3 /* Pods-Sonar_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Sonar_Tests.modulemap"; sourceTree = "<group>"; };
+		C7438D812FAC2CECDBEFD9B2C618F2DB /* Pods-Sonar_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sonar_Example-dummy.m"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D60C597388F847AEBCBE55B6D235EE2F /* Pods-Sonar_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sonar_Example-frameworks.sh"; sourceTree = "<group>"; };
+		DB5B7563DF85D8B3569583BD5B2EE2DF /* Pods-Sonar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sonar_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DB661ED8FD5EB77C98BA9CA71D07A943 /* Pods-Sonar_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sonar_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		E1DCDAAA582B80C3D380110AF980BC8C /* Pods-Sonar_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sonar_Example-umbrella.h"; sourceTree = "<group>"; };
+		E6983E36981A83AB5CB89BAA79430397 /* WavesLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WavesLayer.swift; sourceTree = "<group>"; };
+		EDC66B94F3E1D2D9C05A8176370F075D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C2DD27E1B5962B45D93BCFC1FA2BB27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		810C2E405E274DEF64B7EDEB6A08953E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BCDF04890189EAB67A2FB89EAC490FA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B7860263BC87AAA0CFFEE6934D13D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652690D96C48D4B3F696CB1C1E332A92 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A49CC1A8532C5AD23325A3C4F95B559C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC00BC3EFB594131951864FCA4A83C7D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DD292F266D8CB4E9B75B1921BD593C6 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D054075C829AAA87AE57D96D841059C1 /* Sonar */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		231AC88622B5A8E4831E0F9B7A8D4C25 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3C038662EC70F64EB31E023ADC80E60 /* Pods-Sonar_Example */,
+				5749B354A367ED5B293C157FCFECADF0 /* Pods-Sonar_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5749B354A367ED5B293C157FCFECADF0 /* Pods-Sonar_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				49EA265BFB301173B7E816285225258B /* Info.plist */,
+				C3EFF6B14B6C3876B506D46FDCD434E3 /* Pods-Sonar_Tests.modulemap */,
+				B90C13E3C97141F29CF2E3C2E11B2B7E /* Pods-Sonar_Tests-acknowledgements.markdown */,
+				10FD74BD01F15457C7D61DD098D00963 /* Pods-Sonar_Tests-acknowledgements.plist */,
+				7C00127E0D8028EF1EDD925A01838D0C /* Pods-Sonar_Tests-dummy.m */,
+				9959090F01336168449C75640F51480D /* Pods-Sonar_Tests-frameworks.sh */,
+				991AD60D303F4E6A53C35D85A3BE5C7E /* Pods-Sonar_Tests-resources.sh */,
+				6FD26228897A7B1F6C4AD82915C92E0D /* Pods-Sonar_Tests-umbrella.h */,
+				82ADC642D07B48515926AB35FC66C6EF /* Pods-Sonar_Tests.debug.xcconfig */,
+				A4A2CCBA26D87FEB96EA83A08E466DFA /* Pods-Sonar_Tests.release.xcconfig */,
+			);
+			name = "Pods-Sonar_Tests";
+			path = "Target Support Files/Pods-Sonar_Tests";
+			sourceTree = "<group>";
+		};
+		5B9137F67D232DF7C7E7DFFB174882A3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1F7ED6E6377227B6C5AA64E444886E84 /* RadialGradienLayer.swift */,
+				316C8DC97B5557F8A499FBAC864D9237 /* SonarItemView.swift */,
+				9E036B93033A5AECCEEA0E52C19A449E /* SonarView.swift */,
+				4DFCFD170AF064BA08F9532C0CF90CA8 /* SonarViewCenteredLayout.swift */,
+				57C11F74645C171B84E3FC5A2A1BC3FC /* SonarViewLayout.swift */,
+				E6983E36981A83AB5CB89BAA79430397 /* WavesLayer.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				1DD292F266D8CB4E9B75B1921BD593C6 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				C9A5F466B2CF4CD829EBD1CC88AA5F4E /* Products */,
+				231AC88622B5A8E4831E0F9B7A8D4C25 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B3F55B114D059C1E02B6B950DC83AE5A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				213113D80897EB88F6902931E44032AC /* Info.plist */,
+				09C601765D328A64ED51B35229B6929D /* ResourceBundle-Sonar-Info.plist */,
+				0C57FB6503069328BE03B5C1D6E1BBCE /* Sonar.modulemap */,
+				3E2B9C6CD29D9F8A0ED3624A6533CF58 /* Sonar.xcconfig */,
+				6FC8EA690007059E7B07A93C7BEC3102 /* Sonar-dummy.m */,
+				BFEE17255C35BD12458B07CEBF48D3EE /* Sonar-prefix.pch */,
+				60562D32C1B5853244BE047BBA67BB13 /* Sonar-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Sonar";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9A5F466B2CF4CD829EBD1CC88AA5F4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E3A97D2301B5BD4D7CE1BD2B88FF6F9 /* Pods_Sonar_Example.framework */,
+				438824386347E714BB8C2B08C82C0ABD /* Pods_Sonar_Tests.framework */,
+				6CB0963C60BE39145D77326BEE9FAC12 /* Sonar.bundle */,
+				34325C619E34EE6997CA92B545AA17A2 /* Sonar.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D010F1D05BE682C36209E52261AE275F /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				5B9137F67D232DF7C7E7DFFB174882A3 /* Classes */,
+			);
+			name = Pod;
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		D054075C829AAA87AE57D96D841059C1 /* Sonar */ = {
+			isa = PBXGroup;
+			children = (
+				D010F1D05BE682C36209E52261AE275F /* Pod */,
+				B3F55B114D059C1E02B6B950DC83AE5A /* Support Files */,
+			);
+			name = Sonar;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		D3C038662EC70F64EB31E023ADC80E60 /* Pods-Sonar_Example */ = {
+			isa = PBXGroup;
+			children = (
+				EDC66B94F3E1D2D9C05A8176370F075D /* Info.plist */,
+				92F3E569D0765596685DB96111E2A8CA /* Pods-Sonar_Example.modulemap */,
+				A10B65F3F301FC3E0DA304599E36C9C5 /* Pods-Sonar_Example-acknowledgements.markdown */,
+				DB661ED8FD5EB77C98BA9CA71D07A943 /* Pods-Sonar_Example-acknowledgements.plist */,
+				C7438D812FAC2CECDBEFD9B2C618F2DB /* Pods-Sonar_Example-dummy.m */,
+				D60C597388F847AEBCBE55B6D235EE2F /* Pods-Sonar_Example-frameworks.sh */,
+				528461E6BC59BE539B3F9C8EA4559EDF /* Pods-Sonar_Example-resources.sh */,
+				E1DCDAAA582B80C3D380110AF980BC8C /* Pods-Sonar_Example-umbrella.h */,
+				DB5B7563DF85D8B3569583BD5B2EE2DF /* Pods-Sonar_Example.debug.xcconfig */,
+				1BE6F803F61C62C875C8688E32251ED1 /* Pods-Sonar_Example.release.xcconfig */,
+			);
+			name = "Pods-Sonar_Example";
+			path = "Target Support Files/Pods-Sonar_Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3A1DEC015F6AA4BCA9229F84FB698AE4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30DC84E7B9846DD0CF19E9E1A041C9E5 /* Pods-Sonar_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44113D42B574387569BCA1A981BFA4B2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A74509C591E1B9FF56EF085D61E9A030 /* Pods-Sonar_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FD0A806673278BA3D97162C9B2D7578 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1951449FD96D033FAD92815F7AB52E51 /* Sonar-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		394F172A1A3EDD252AE38CD4FE1001F9 /* Pods-Sonar_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF6B8DD92137C29B5F08CF11C055850E /* Build configuration list for PBXNativeTarget "Pods-Sonar_Tests" */;
+			buildPhases = (
+				D799878C37062747B6EE00E511136DC5 /* Sources */,
+				83B7860263BC87AAA0CFFEE6934D13D7 /* Frameworks */,
+				3A1DEC015F6AA4BCA9229F84FB698AE4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A34836D40EB6B88B6E8BE24D484194E7 /* PBXTargetDependency */,
+			);
+			name = "Pods-Sonar_Tests";
+			productName = "Pods-Sonar_Tests";
+			productReference = 438824386347E714BB8C2B08C82C0ABD /* Pods_Sonar_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6B66B15E8B56EC403083F7BF5DC2B5C4 /* Pods-Sonar_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D3CD522B796DC67A79B12133DE53D31 /* Build configuration list for PBXNativeTarget "Pods-Sonar_Example" */;
+			buildPhases = (
+				D41A0EC5466E9E51593064FECC05012D /* Sources */,
+				A49CC1A8532C5AD23325A3C4F95B559C /* Frameworks */,
+				44113D42B574387569BCA1A981BFA4B2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49668275616E15CD161A34FC10D6E684 /* PBXTargetDependency */,
+			);
+			name = "Pods-Sonar_Example";
+			productName = "Pods-Sonar_Example";
+			productReference = 6E3A97D2301B5BD4D7CE1BD2B88FF6F9 /* Pods_Sonar_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A8072D5423CA9B86A7BF36F383EBB392 /* Sonar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 366E835BA147C1E28C7FF57E3E062DAD /* Build configuration list for PBXNativeTarget "Sonar" */;
+			buildPhases = (
+				164FC1CDFEA1E07BBA42C421DB8E74BE /* Sources */,
+				810C2E405E274DEF64B7EDEB6A08953E /* Frameworks */,
+				86FCF20ADDC3BAA37E03744512E2B4D8 /* Resources */,
+				8FD0A806673278BA3D97162C9B2D7578 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACFC42F97188C7885B4F3905C9953FB5 /* PBXTargetDependency */,
+			);
+			name = Sonar;
+			productName = Sonar;
+			productReference = 34325C619E34EE6997CA92B545AA17A2 /* Sonar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DC38E44FF6666332338134EAB206942D /* Sonar-Sonar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F10971201DE4B1A0F22F3C577E69AF09 /* Build configuration list for PBXNativeTarget "Sonar-Sonar" */;
+			buildPhases = (
+				8CF49C0767CB5CF2E746044383F59374 /* Sources */,
+				1C2DD27E1B5962B45D93BCFC1FA2BB27 /* Frameworks */,
+				F56A69A5AEA605AE16D2DB406E384F20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sonar-Sonar";
+			productName = "Sonar-Sonar";
+			productReference = 6CB0963C60BE39145D77326BEE9FAC12 /* Sonar.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C9A5F466B2CF4CD829EBD1CC88AA5F4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B66B15E8B56EC403083F7BF5DC2B5C4 /* Pods-Sonar_Example */,
+				394F172A1A3EDD252AE38CD4FE1001F9 /* Pods-Sonar_Tests */,
+				A8072D5423CA9B86A7BF36F383EBB392 /* Sonar */,
+				DC38E44FF6666332338134EAB206942D /* Sonar-Sonar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86FCF20ADDC3BAA37E03744512E2B4D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B675B6CF6B383FE9EE4C8942B29B03F /* Sonar.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F56A69A5AEA605AE16D2DB406E384F20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		164FC1CDFEA1E07BBA42C421DB8E74BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AB8FEAA6CE67F9B773E831C6C2321D9 /* RadialGradienLayer.swift in Sources */,
+				9B5D3504B33789B6F90A518E2025753F /* Sonar-dummy.m in Sources */,
+				A9137E826F31E7B9FE04B22A33B8D86E /* SonarItemView.swift in Sources */,
+				F58D8EEB7C5BE98C4E4CB9D3600D9DEA /* SonarView.swift in Sources */,
+				83AB501CA22FB4991B6769DF92595F35 /* SonarViewCenteredLayout.swift in Sources */,
+				14210E795773FF07B7C5528B4860C1E9 /* SonarViewLayout.swift in Sources */,
+				A44FD8503C900AEDB65A64F2D606763D /* WavesLayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CF49C0767CB5CF2E746044383F59374 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41A0EC5466E9E51593064FECC05012D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED60FF280419AC9E50F7040F1140EA5A /* Pods-Sonar_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D799878C37062747B6EE00E511136DC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D31B713466EA046F241CB6CAFF5B5C3A /* Pods-Sonar_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49668275616E15CD161A34FC10D6E684 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Sonar;
+			target = A8072D5423CA9B86A7BF36F383EBB392 /* Sonar */;
+			targetProxy = 8CC64B296F64FE7061B05410A62628B1 /* PBXContainerItemProxy */;
+		};
+		A34836D40EB6B88B6E8BE24D484194E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Sonar;
+			target = A8072D5423CA9B86A7BF36F383EBB392 /* Sonar */;
+			targetProxy = BC08B75329987461FF80CE73FD8E377A /* PBXContainerItemProxy */;
+		};
+		ACFC42F97188C7885B4F3905C9953FB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Sonar-Sonar";
+			target = DC38E44FF6666332338134EAB206942D /* Sonar-Sonar */;
+			targetProxy = 92A6D8E0D9C7C6FF20AC537B1AC96C6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2AA543FD5C99E9A4748A4DA3976B6BEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E2B9C6CD29D9F8A0ED3624A6533CF58 /* Sonar.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Sonar";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Sonar/ResourceBundle-Sonar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = Sonar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		35107E7952DF85C5A739E4EF96033D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4A2CCBA26D87FEB96EA83A08E466DFA /* Pods-Sonar_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Sonar_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sonar_Tests/Pods-Sonar_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Sonar_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		68C5D2C2435628FFC283549A37E8D027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E2B9C6CD29D9F8A0ED3624A6533CF58 /* Sonar.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Sonar";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Sonar/ResourceBundle-Sonar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = Sonar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		6C3D9AEB5A889473903E3CF1658C128E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB5B7563DF85D8B3569583BD5B2EE2DF /* Pods-Sonar_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Sonar_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sonar_Example/Pods-Sonar_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Sonar_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7E81C4980B16D5C2FC2387107526E6FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BE6F803F61C62C875C8688E32251ED1 /* Pods-Sonar_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Sonar_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sonar_Example/Pods-Sonar_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Sonar_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A691D62615E60E9DD8235C192745329A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E2B9C6CD29D9F8A0ED3624A6533CF58 /* Sonar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Sonar/Sonar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Sonar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Sonar/Sonar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Sonar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E046E7D8CF6460F79B7A166CB1C0F504 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E2B9C6CD29D9F8A0ED3624A6533CF58 /* Sonar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Sonar/Sonar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Sonar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Sonar/Sonar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Sonar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F91C619906EF914632C58CB3A1AA5D16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82ADC642D07B48515926AB35FC66C6EF /* Pods-Sonar_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Sonar_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sonar_Tests/Pods-Sonar_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Sonar_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D3CD522B796DC67A79B12133DE53D31 /* Build configuration list for PBXNativeTarget "Pods-Sonar_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C3D9AEB5A889473903E3CF1658C128E /* Debug */,
+				7E81C4980B16D5C2FC2387107526E6FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		366E835BA147C1E28C7FF57E3E062DAD /* Build configuration list for PBXNativeTarget "Sonar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E046E7D8CF6460F79B7A166CB1C0F504 /* Debug */,
+				A691D62615E60E9DD8235C192745329A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF6B8DD92137C29B5F08CF11C055850E /* Build configuration list for PBXNativeTarget "Pods-Sonar_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F91C619906EF914632C58CB3A1AA5D16 /* Debug */,
+				35107E7952DF85C5A739E4EF96033D34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F10971201DE4B1A0F22F3C577E69AF09 /* Build configuration list for PBXNativeTarget "Sonar-Sonar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AA543FD5C99E9A4748A4DA3976B6BEA /* Debug */,
+				68C5D2C2435628FFC283549A37E8D027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
