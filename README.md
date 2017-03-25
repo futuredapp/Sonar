@@ -69,6 +69,7 @@ If you need to expose another properties or you have ideas how to improve it, fi
 iOS 8+, 
 
 Version 2.x - Swift 2.2+
+
 Version 3.x - Swift 3.0+
 
 ## Installation
