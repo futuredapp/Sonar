@@ -83,7 +83,7 @@ pod "Sonar"
 
 ## Author
 
-Aleš Kocur, ales@thefuntasty.com
+Aleš Kocur, aleskocur@icloud.com
 
 ## License
 
