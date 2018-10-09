@@ -83,7 +83,7 @@ class WavesLayer: CALayer {
             strokeAnimation.fromValue = 1.0
             strokeAnimation.toValue = 0.0
             strokeAnimation.isRemovedOnCompletion = false
-            strokeAnimation.fillMode = kCAFillModeForwards
+            strokeAnimation.fillMode = .forwards
             layer.add(strokeAnimation, forKey: "strokeEnd")
 
             if let layer = layer as? RadialGradientLayer {
@@ -92,7 +92,7 @@ class WavesLayer: CALayer {
                 displayAnimation.fromValue = 1.0
                 displayAnimation.toValue = 0.0
                 displayAnimation.isRemovedOnCompletion = false
-                displayAnimation.fillMode = kCAFillModeForwards
+                displayAnimation.fillMode = .forwards
                 layer.add(displayAnimation, forKey: "opacity")
             }
         }
@@ -124,7 +124,7 @@ class WavesLayer: CALayer {
             strokeAnimation.fromValue = 0.0
             strokeAnimation.toValue = 1.0
             strokeAnimation.isRemovedOnCompletion = false
-            strokeAnimation.fillMode = kCAFillModeForwards
+            strokeAnimation.fillMode = .forwards
 
             layer.add(strokeAnimation, forKey: "strokeEnd")
 
@@ -145,7 +145,7 @@ class WavesLayer: CALayer {
             displayAnimation.fromValue = 0.0
             displayAnimation.toValue = 1.0
             displayAnimation.isRemovedOnCompletion = false
-            displayAnimation.fillMode = kCAFillModeForwards
+            displayAnimation.fillMode = .forwards
 
             gradient.add(displayAnimation, forKey: "opacity")
 
