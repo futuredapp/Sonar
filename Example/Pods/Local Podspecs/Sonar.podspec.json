@@ -6,7 +6,7 @@
   "homepage": "https://github.com/thefuntasty/Sonar",
   "license": "MIT",
   "authors": {
-    "Aleš Kocur": "ales@thefuntasty.com"
+    "Aleš Kocur": "aleskocur@icloud.com"
   },
   "source": {
     "git": "https://github.com/thefuntasty/Sonar.git",
@@ -16,10 +16,5 @@
     "ios": "8.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
-  "resource_bundles": {
-    "Sonar": [
-      "Pod/Assets/*.png"
-    ]
-  }
+  "source_files": "Pod/Classes/**/*"
 }
