@@ -78,28 +78,28 @@ class WavesLayer: CALayer {
         }
 
         _waveLayers.forEach { layer in
-            let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
-            strokeAnimation.duration = 0.3
-            strokeAnimation.fromValue = 1.0
-            strokeAnimation.toValue = 0.0
-            strokeAnimation.isRemovedOnCompletion = false
-            strokeAnimation.fillMode = .forwards
-            layer.add(strokeAnimation, forKey: "strokeEnd")
-
+            
+            animation(for: "strokeEnd", layer: layer)
             if let layer = layer as? RadialGradientLayer {
-                let displayAnimation = CABasicAnimation(keyPath: "opacity")
-                displayAnimation.duration = 0.3
-                displayAnimation.fromValue = 1.0
-                displayAnimation.toValue = 0.0
-                displayAnimation.isRemovedOnCompletion = false
-                displayAnimation.fillMode = .forwards
-                layer.add(displayAnimation, forKey: "opacity")
+
+                animation(for: "opacity", layer: layer)
             }
         }
 
         CATransaction.commit()
     }
 
+    private func animation(for keyPath: String, layer: CALayer) {
+        
+        let animation = CABasicAnimation(keyPath: keyPath)
+        animation.duration = 0.3
+        animation.fromValue = 1.0
+        animation.toValue = 0.0
+        animation.isRemovedOnCompletion = false
+        animation.fillMode = .forwards
+        layer.add(animation, forKey: keyPath)
+    }
+    
     private func _drawWaves() {
         // Clean up existing layers if there are some
         _waveLayers.forEach { $0.removeFromSuperlayer() }
