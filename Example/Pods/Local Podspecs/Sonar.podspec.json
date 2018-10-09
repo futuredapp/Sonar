@@ -16,5 +16,6 @@
     "ios": "8.0"
   },
   "requires_arc": true,
+  "swift_version": "4.2",
   "source_files": "Pod/Classes/**/*"
 }
