@@ -1,0 +1,7 @@
+lane :update_pod do |options|
+    nextVersion = options[:nextVersion]
+    git_commit(path: ["./Sonar.podspec"], message: "New pod version " + nextVersion)
+    add_git_tag(tag: nextVersion)
+    push_to_git_remote(remote: "origin", local_branch: "swift_4.2", remote_branch: "swift_4.2", force: true, force_with_lease: true, tags: true)
+    pod_push(path: "./Sonar.podspec")
+end
