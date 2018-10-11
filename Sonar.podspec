@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Sonar"
-  s.version          = "4.0.3"
+  s.version          = "4.0.4"
   s.summary          = "Radar style view written in swift"
 
 # This description is used to generate tags and improve search results.
