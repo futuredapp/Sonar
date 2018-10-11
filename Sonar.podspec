@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Sonar"
-  s.version          = "4.0.4"
+  s.version          = "4.0.0"
   s.summary          = "Radar style view written in swift"
 
 # This description is used to generate tags and improve search results.
@@ -20,11 +20,11 @@ Pod::Spec.new do |s|
                         Simple radar style view written in swift
                        DESC
 
-  s.homepage         = "https://github.com/RomanPodymov/Sonar"
+  s.homepage         = "https://github.com/thefuntasty/Sonar"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Aleš Kocur" => "aleskocur@icloud.com" }
-  s.source           = { :git => "https://github.com/RomanPodymov/Sonar.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/thefuntasty/Sonar.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '8.0'
