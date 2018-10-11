@@ -89,12 +89,19 @@ class WavesLayer: CALayer {
         CATransaction.commit()
     }
 
-    private func animation(for keyPath: String, layer: CALayer) {
+    private func animation(for keyPath: String,
+                           layer: CALayer,
+                           isReverted: Bool = true,
+                           beginTime: CFTimeInterval? = nil) {
         
         let animation = CABasicAnimation(keyPath: keyPath)
+        if let beginTime = beginTime {
+            
+            animation.beginTime = beginTime
+        }
         animation.duration = 0.3
-        animation.fromValue = 1.0
-        animation.toValue = 0.0
+        animation.fromValue = isReverted ? 1.0 : 0.0
+        animation.toValue = isReverted ? 0.0 : 1.0
         animation.isRemovedOnCompletion = false
         animation.fillMode = .forwards
         layer.add(animation, forKey: keyPath)
@@ -118,15 +125,10 @@ class WavesLayer: CALayer {
             let radius = calculatedRadius + (calculatedRadius * CGFloat(_sonarView.sonarViewLayout.waveRadiusOffset(sonarView: _sonarView)))
             let layer = self.circleWithRadius(radius: radius)
 
-            let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
-            strokeAnimation.duration = 0.3
-            strokeAnimation.beginTime = CACurrentMediaTime() + Double(num) * 0.3
-            strokeAnimation.fromValue = 0.0
-            strokeAnimation.toValue = 1.0
-            strokeAnimation.isRemovedOnCompletion = false
-            strokeAnimation.fillMode = .forwards
-
-            layer.add(strokeAnimation, forKey: "strokeEnd")
+            animation(for: "strokeEnd",
+                      layer: layer,
+                      isReverted: false,
+                      beginTime: CACurrentMediaTime() + Double(num) * 0.3)
 
             layer.strokeEnd = 0.0
 
@@ -139,16 +141,11 @@ class WavesLayer: CALayer {
             let gradientLocations: [CGFloat] = [0.0, gradientSize, 1.0]
             let gradient = RadialGradientLayer(frame: self.frame, radius: radius - 0.5, center: CGPoint(x: self.frame.width / 2, y: self.frame.height), colors: gradientColors, locations: gradientLocations)
 
-            let displayAnimation = CABasicAnimation(keyPath: "opacity")
-            displayAnimation.duration = 0.3
-            displayAnimation.beginTime = CACurrentMediaTime() + Double(num) * 0.3
-            displayAnimation.fromValue = 0.0
-            displayAnimation.toValue = 1.0
-            displayAnimation.isRemovedOnCompletion = false
-            displayAnimation.fillMode = .forwards
-
-            gradient.add(displayAnimation, forKey: "opacity")
-
+            animation(for: "opacity",
+                      layer: gradient,
+                      isReverted: false,
+                      beginTime: CACurrentMediaTime() + Double(num) * 0.3)
+            
             gradient.opacity = 0.0
             self.addSublayer(gradient)
             _waveLayers.append(gradient)
