@@ -1,5 +1,5 @@
 PODS:
-  - Sonar (3.0.0)
+  - Sonar (4.0.0)
 
 DEPENDENCIES:
   - Sonar (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Sonar: 0f8c975b011d1c5e7ec3a66997957844d7ea8dd5
+  Sonar: 2f455f69841fadef1bd92f13f187569dfb3f5ad4
 
 PODFILE CHECKSUM: b85457d725335c87745002db0612cea5101858a0
 
