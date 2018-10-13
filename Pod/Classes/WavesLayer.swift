@@ -79,10 +79,10 @@ class WavesLayer: CALayer {
 
         _waveLayers.forEach { layer in
             
-            animation(for: "strokeEnd", layer: layer)
+            addAnimation(for: "strokeEnd", layer: layer)
             if let layer = layer as? RadialGradientLayer {
 
-                animation(for: "opacity", layer: layer)
+                addAnimation(for: "opacity", layer: layer)
             }
         }
 
@@ -125,10 +125,10 @@ class WavesLayer: CALayer {
             let radius = calculatedRadius + (calculatedRadius * CGFloat(_sonarView.sonarViewLayout.waveRadiusOffset(sonarView: _sonarView)))
             let layer = self.circleWithRadius(radius: radius)
 
-            animation(for: "strokeEnd",
-                      layer: layer,
-                      isReverted: false,
-                      beginTime: CACurrentMediaTime() + Double(num) * 0.3)
+            addAnimation(for: "strokeEnd",
+                         layer: layer,
+                         isReverted: false,
+                         beginTime: CACurrentMediaTime() + Double(num) * 0.3)
 
             layer.strokeEnd = 0.0
 
@@ -141,10 +141,10 @@ class WavesLayer: CALayer {
             let gradientLocations: [CGFloat] = [0.0, gradientSize, 1.0]
             let gradient = RadialGradientLayer(frame: self.frame, radius: radius - 0.5, center: CGPoint(x: self.frame.width / 2, y: self.frame.height), colors: gradientColors, locations: gradientLocations)
 
-            animation(for: "opacity",
-                      layer: gradient,
-                      isReverted: false,
-                      beginTime: CACurrentMediaTime() + Double(num) * 0.3)
+            addAnimation(for: "opacity",
+                         layer: gradient,
+                         isReverted: false,
+                         beginTime: CACurrentMediaTime() + Double(num) * 0.3)
             
             gradient.opacity = 0.0
             self.addSublayer(gradient)
