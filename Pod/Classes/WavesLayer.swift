@@ -89,10 +89,10 @@ class WavesLayer: CALayer {
         CATransaction.commit()
     }
 
-    private func animation(for keyPath: String,
-                           layer: CALayer,
-                           isReverted: Bool = true,
-                           beginTime: CFTimeInterval? = nil) {
+    private func addAnimation(for keyPath: String,
+                              layer: CALayer,
+                              isReverted: Bool = true,
+                              beginTime: CFTimeInterval? = nil) {
         
         let animation = CABasicAnimation(keyPath: keyPath)
         if let beginTime = beginTime {
