@@ -34,3 +34,6 @@ Carthage
 
 # Fastlane
 report.xml
+
+# Example
+Example/Pods/Target Support Files/
