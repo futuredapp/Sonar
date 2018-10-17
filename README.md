@@ -1,6 +1,6 @@
 # Sonar
 
-[![CI Status](http://img.shields.io/travis/Aleš Kocur/Sonar.svg?style=flat)](https://travis-ci.org/Aleš Kocur/Sonar)
+[![Build Status](https://app.bitrise.io/app/c8d6d0530984e7d3/status.svg?token=5a_F5V-Bpm1tYAi8IvvLig&branch=master)](https://app.bitrise.io/app/c8d6d0530984e7d3)
 [![Version](https://img.shields.io/cocoapods/v/Sonar.svg?style=flat)](http://cocoapods.org/pods/Sonar)
 [![License](https://img.shields.io/cocoapods/l/Sonar.svg?style=flat)](http://cocoapods.org/pods/Sonar)
 [![Platform](https://img.shields.io/cocoapods/p/Sonar.svg?style=flat)](http://cocoapods.org/pods/Sonar)
