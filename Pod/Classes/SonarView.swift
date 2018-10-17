@@ -88,7 +88,7 @@ public class SonarView: UIView {
             return
         }
 
-        UIView.animate(withDuration: 0.3, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
             self._itemViews.forEach { $0.alpha = 0.0 }
         }) { _ in
 
@@ -121,7 +121,7 @@ public class SonarView: UIView {
                     distanceLabel.sizeToFit()
                     distanceLabel.layer.position = position
 
-                    UIView.animate(withDuration: 0.3, delay: Double(waveIndex) * 0.3, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                    UIView.animate(withDuration: 0.3, delay: Double(waveIndex) * 0.3, options: .curveEaseIn, animations: {
                         distanceLabel.alpha = 1.0
                     }, completion: nil)
 
@@ -165,7 +165,7 @@ public class SonarView: UIView {
 
         itemView.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
 
-        UIView.animateKeyframes(withDuration: 0.4, delay: (Double(itemIndex) * 0.1) + (Double(waveIndex) * 0.3) + 0.1, options: UIViewKeyframeAnimationOptions.calculationModeLinear, animations: {
+        UIView.animateKeyframes(withDuration: 0.4, delay: (Double(itemIndex) * 0.1) + (Double(waveIndex) * 0.3) + 0.1, options: .calculationModeLinear, animations: {
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1 / 2) {
                 itemView.alpha = 1.0
                 itemView.transform = CGAffineTransform(scaleX: 1.15, y: 1.15)
@@ -184,7 +184,7 @@ public class SonarView: UIView {
         return label
     }
 
-    func didSelectItem(sender: UIGestureRecognizer) {
+    @objc func didSelectItem(sender: UIGestureRecognizer) {
         if let itemView = sender.view as? SonarItemView {
             delegate?.sonarView(sonarView: self, didSelectObjectInWave: itemView.position.waveIndex, atIndex: itemView.position.itemIndex)
         }
