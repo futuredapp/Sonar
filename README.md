@@ -74,6 +74,8 @@ Version 3.x - Swift 3.0+
 
 Version 4.x - Swift 4.2+
 
+Version 5.x - Swift 5.0+
+
 ## Installation
 
 Sonar is available through [CocoaPods](http://cocoapods.org). To install
