@@ -5,8 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/Sonar.svg?style=flat)](http://cocoapods.org/pods/Sonar)
 [![Platform](https://img.shields.io/cocoapods/p/Sonar.svg?style=flat)](http://cocoapods.org/pods/Sonar)
 
-<img src=https://raw.githubusercontent.com/thefuntasty/Sonar/master/screenshot.png width=300 />
-<img src=https://raw.githubusercontent.com/thefuntasty/Sonar/master/sonar-animation.gif width=300 />
+<img src=https://raw.githubusercontent.com/futuredapp/Sonar/master/screenshot.png width=300 />
+<img src=https://raw.githubusercontent.com/futuredapp/Sonar/master/sonar-animation.gif width=300 />
 
 Simple radar style view, written in Swift, pure CoreAnimation (no images). Highly adjustable.
 
@@ -14,7 +14,7 @@ Simple radar style view, written in Swift, pure CoreAnimation (no images). Highl
 
 Just place the UIView somewhere in your controller and make it SonarView class.
 
-SonarView copies the data source and delegate patter from UITableView. 
+SonarView copies the data source and delegate patter from UITableView.
 
 ```swift
 /// Data source
@@ -35,9 +35,9 @@ public protocol SonarViewDataSource: class {
 
 `SonarItemView` is just a UIView subclass. In order to use your custom view in radar, make your view SonarItemView subclass. The size of view is determined via layout. The layout is defined by SonarViewLayout protocol. Sonar comes with one predefined layout - SonarViewCenteredLayout. The items in a wave are placed from edges to the center, for example if we have 4 items in wave, first is placed at the left side, second at the right side, third at the left again but a right from the first one and so on. I know, the image would be better:
 
-<img src="https://raw.githubusercontent.com/thefuntasty/Sonar/master/sonarLayoutScreenshot.png" width="300" />
+<img src="https://raw.githubusercontent.com/futuredapp/Sonar/master/sonarLayoutScreenshot.png" width="300" />
 
-If you need different behaviour, you can of course create your own layout by adopting the SonarViewLayout a pass it to the SonarView. See [SonarViewLayout](https://github.com/thefuntasty/Sonar/blob/master/Pod/Classes/SonarViewLayout.swift) for more information.
+If you need different behaviour, you can of course create your own layout by adopting the SonarViewLayout a pass it to the SonarView. See [SonarViewLayout](https://github.com/futuredapp/Sonar/blob/master/Pod/Classes/SonarViewLayout.swift) for more information.
 
 The last protocol is Delegate which handles selections and titles on each wave
 
@@ -66,7 +66,7 @@ If you need to expose another properties or you have ideas how to improve it, fi
 
 ## Requirements
 
-iOS 8+, 
+iOS 8+,
 
 Version 2.x - Swift 2.2+
 
@@ -91,4 +91,4 @@ Aleš Kocur, aleskocur@icloud.com
 
 ## License
 
-Sonar is available under the MIT license. See the LICENSE file for more info.
+Sonar is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
