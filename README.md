@@ -37,7 +37,7 @@ public protocol SonarViewDataSource: class {
 
 <img src="https://raw.githubusercontent.com/futuredapp/Sonar/master/sonarLayoutScreenshot.png" width="300" />
 
-If you need different behaviour, you can of course create your own layout by adopting the SonarViewLayout a pass it to the SonarView. See [SonarViewLayout](https://github.com/futuredapp/Sonar/blob/master/Pod/Classes/SonarViewLayout.swift) for more information.
+If you need different behaviour, you can of course create your own layout by adopting the SonarViewLayout and pass it to the SonarView. See [SonarViewLayout](https://github.com/futuredapp/Sonar/blob/master/Pod/Classes/SonarViewLayout.swift) for more information.
 
 The last protocol is Delegate which handles selections and titles on each wave
 
