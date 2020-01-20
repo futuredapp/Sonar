@@ -4,7 +4,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Sonar"
-  s.version          = "5.0.0"
+  s.version          = "5.1.0"
   s.summary          = "Radar style view written in swift"
 
   s.description      = <<-DESC
