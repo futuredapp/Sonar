@@ -48,7 +48,7 @@ public protocol SonarViewDelegate: class {
 }
 ```
 
-If `distanceForWaveAtIndex` returns nil, the label will be hidden. For more informations see the Example project.
+If `distanceForWaveAtIndex` returns nil, the label will be hidden. For more information see the Example project.
 
 ### Appearance
 
