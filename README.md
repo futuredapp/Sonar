@@ -1,3 +1,5 @@
+<img alt="Sonar logo" align="right" src="Documentation/Sonar.svg">
+
 # Sonar
 
 [![Build Status](https://app.bitrise.io/app/c8d6d0530984e7d3/status.svg?token=5a_F5V-Bpm1tYAi8IvvLig&branch=master)](https://app.bitrise.io/app/c8d6d0530984e7d3)
