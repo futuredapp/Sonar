@@ -1,10 +1,3 @@
-//
-//  WaveLayer.swift
-//  Sonar
-//
-//  Created by Aleš Kocur on 01/01/16.
-//  Copyright © 2016 Aleš Kocur. All rights reserved.
-//
 import UIKit
 
 enum WavesLayerError: Error {
