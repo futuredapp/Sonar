@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = "https://github.com/futuredapp/Sonar"
-  s.screenshots     = "https://raw.githubusercontent.com/futuredapp/Sonar/master/screenshot.png", "https://raw.githubusercontent.com/futuredapp/Sonar/master/sonar-animation.gif"
+  s.screenshots     = "https://github.com/futuredapp/Sonar/raw/master/Documentation/screenshot.png", "https://github.com/futuredapp/Sonar/raw/master/Documentation/sonar-animation.gif"
   s.license          = 'MIT'
   s.author           = { "Aleš Kocur" => "aleskocur@icloud.com" }
   s.source           = { :git => "https://github.com/futuredapp/Sonar.git", :tag => s.version.to_s }
