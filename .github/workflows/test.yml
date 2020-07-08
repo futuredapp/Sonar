@@ -20,4 +20,4 @@ jobs:
         bundle exec pod lib lint
     - name: Build example app
       run: |
-        xcodebuild -project Sonar/Example.xcodeproj -scheme Example -destination 'platform=iOS Simulator,name=iPhone 8' -sdk iphonesimulator test
+        xcodebuild -project Example/Sonar.xcodeproj -scheme Example -destination 'platform=iOS Simulator,name=iPhone 8' -sdk iphonesimulator test
