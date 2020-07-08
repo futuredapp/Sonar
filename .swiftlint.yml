@@ -1,0 +1,38 @@
+disabled_rules:
+  - line_length
+excluded:
+  - Pods
+  - .build
+opt_in_rules:
+  - vertical_whitespace
+  - empty_count
+  - switch_case_on_newline
+  - redundant_nil_coalescing
+  - overridden_super_call
+  - explicit_init
+  - conditional_returns_on_newline
+  - closure_spacing
+  - first_where
+  - closure_end_indentation
+  - attributes
+
+# Rule configurations
+identifier_name:
+  excluded:
+    - id
+    - to
+    - in
+    - at
+    - of
+    - on
+    - x
+    - y
+    - a
+    - b
+
+# Disable errors, allow only warnings
+cyclomatic_complexity:
+  warning: 10
+force_cast: warning
+force_try: warning
+function_parameter_count: 5

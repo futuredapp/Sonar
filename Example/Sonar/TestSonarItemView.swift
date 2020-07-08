@@ -4,7 +4,7 @@ import Sonar
 final class TestSonarItemView: SonarItemView {
 
     @IBOutlet weak var imageView: UIImageView!
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -14,7 +14,7 @@ final class TestSonarItemView: SonarItemView {
         self.layer.masksToBounds = true
         self.layer.cornerRadius = 25
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         self.imageView.clipsToBounds = true
