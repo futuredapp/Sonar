@@ -1,20 +1,13 @@
-//
-//  ViewController.swift
-//  Sonar
-//
-//  Created by Aleš Kocur on 01/01/16.
-//  Copyright © 2016 Aleš Kocur. All rights reserved.
-//
-
 import UIKit
 import CoreLocation
 import Sonar
 import MapKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
-    @IBOutlet weak var sonarView: SonarView!
-    fileprivate lazy var distanceFormatter: MKDistanceFormatter = MKDistanceFormatter()
+    @IBOutlet private weak var sonarView: SonarView!
+
+    private lazy var distanceFormatter: MKDistanceFormatter = MKDistanceFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +18,8 @@ class ViewController: UIViewController {
         self.sonarView.dataSource = self
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    @IBAction func reloadData(_ sender: AnyObject) {
+    @IBAction private func reloadData(_ sender: AnyObject) {
         sonarView.reloadData()
     }
 }
@@ -63,12 +51,12 @@ extension ViewController: SonarViewDataSource {
     
     // MARK: - Helpers
     
-    fileprivate func randomAvatar() -> UIImage {
+    private func randomAvatar() -> UIImage {
         let index = arc4random_uniform(3) + 1
         return UIImage(named: "avatar\(index)")!
     }
     
-    fileprivate func newItemView() -> TestSonarItemView {
+    private func newItemView() -> TestSonarItemView {
         return Bundle.main.loadNibNamed("TestSonarItemView", owner: self, options: nil)!.first as! TestSonarItemView
     }
 }
@@ -87,9 +75,3 @@ extension ViewController: SonarViewDelegate {
         }
     }
 }
-
-
-func delay(_ delay: Double, closure: @escaping () -> Void) {
-    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
-}
-

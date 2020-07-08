@@ -1,7 +1,3 @@
-#
-# Be sure to run `pod lib lint Sonar.podspec' to ensure this is a
-# valid spec before submitting.
-
 Pod::Spec.new do |s|
   s.name             = "Sonar"
   s.version          = "5.1.0"
