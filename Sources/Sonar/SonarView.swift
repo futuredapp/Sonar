@@ -1,19 +1,12 @@
-//
-//  SonarView.swift
-//  Sonar
-//
-//  Created by Aleš Kocur on 13/01/16.
-//  Copyright © 2016 Aleš Kocur. All rights reserved.
-//
 import UIKit
 
-public protocol SonarViewDataSource: class {
+public protocol SonarViewDataSource: AnyObject {
     func numberOfWaves(sonarView: SonarView) -> Int
     func sonarView(sonarView: SonarView, numberOfItemForWaveIndex waveIndex: Int) -> Int
     func sonarView(sonarView: SonarView, itemViewForWave waveIndex: Int, atIndex: Int) -> SonarItemView
 }
 
-public protocol SonarViewDelegate: class {
+public protocol SonarViewDelegate: AnyObject {
     func sonarView(sonarView: SonarView, didSelectObjectInWave waveIndex: Int, atIndex: Int)
     func sonarView(sonarView: SonarView, textForWaveAtIndex waveIndex: Int) -> String?
 }
@@ -22,10 +15,10 @@ public class SonarView: UIView {
 
     // Private properties
     private var waveLayer: WavesLayer!
-    private var _itemViews: [SonarItemView] = []
-    private var _shadows: [RadialGradientLayer] = []
-    private var _labels: [UIView] = []
-    private var _needsLayout = false
+    private var itemViews: [SonarItemView] = []
+    private var shadows: [RadialGradientLayer] = []
+    private var labels: [UIView] = []
+    private var needsLayout = false
 
     // Public properties
     /// For SonarViewDelegate and SonarViewLayout
@@ -62,12 +55,12 @@ public class SonarView: UIView {
         self.layer.addSublayer(self.waveLayer)
     }
 
-    public override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
 
-        if _needsLayout {
+        if needsLayout {
             waveLayer.frame = self.bounds
-            _needsLayout = false
+            needsLayout = false
             _reloadData()
         }
     }
@@ -75,7 +68,7 @@ public class SonarView: UIView {
     // MARK: - Public API
 
     public func reloadData() {
-        _needsLayout = true
+        needsLayout = true
         self.setNeedsLayout()
         self.layoutIfNeeded()
     }
@@ -89,18 +82,18 @@ public class SonarView: UIView {
         }
 
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
-            self._itemViews.forEach { $0.alpha = 0.0 }
-        }) { _ in
+            self.itemViews.forEach { $0.alpha = 0.0 }
+        }, completion: { _ in
 
             let numberOfWaves = dataSource.numberOfWaves(sonarView: self)
             self.waveLayer.setNumberOfWaves(numberOfWaves: numberOfWaves)
 
-            self._itemViews.forEach { $0.removeFromSuperview() }
-            self._itemViews.removeAll()
-            self._shadows.forEach { $0.removeFromSuperlayer() }
-            self._shadows.removeAll()
-            self._labels.forEach { $0.removeFromSuperview() }
-            self._labels.removeAll()
+            self.itemViews.forEach { $0.removeFromSuperview() }
+            self.itemViews.removeAll()
+            self.shadows.forEach { $0.removeFromSuperlayer() }
+            self.shadows.removeAll()
+            self.labels.forEach { $0.removeFromSuperview() }
+            self.labels.removeAll()
 
             for waveIndex in 0 ..< numberOfWaves {
                 let numberOfItemsInWave = dataSource.sonarView(sonarView: self, numberOfItemForWaveIndex: waveIndex)
@@ -109,7 +102,7 @@ public class SonarView: UIView {
                     distanceLabel.text = textForWave
                     distanceLabel.alpha = 0.0
 
-                    self._labels.append(distanceLabel)
+                    self.labels.append(distanceLabel)
                     self.addSubview(distanceLabel)
 
                     let calculatedRadius = Double(self.waveLayer.radiusForWave(waveIndex: waveIndex))
@@ -127,7 +120,7 @@ public class SonarView: UIView {
 
                     let gradientSize: CGFloat = 60
                     let gradient = RadialGradientLayer(frame: CGRect(center: position, width: gradientSize, height: gradientSize), radius: gradientSize / 2, center: CGPoint(x: gradientSize / 2, y: gradientSize / 2), colors: [UIColor.white.cgColor, UIColor.white.withAlphaComponent(1.0).cgColor, UIColor.white.withAlphaComponent(0.0).cgColor], locations: [0.0, 0.6, 1.0])
-                    self._shadows.append(gradient)
+                    self.shadows.append(gradient)
                     self.layer.insertSublayer(gradient, below: distanceLabel.layer)
                 }
 
@@ -136,14 +129,14 @@ public class SonarView: UIView {
                     self.configureItemView(itemView: itemView, forWave: waveIndex, atIndex: itemIndex, numberOfItemsInWave: numberOfItemsInWave)
                 }
             }
-        }
+        })
     }
 
     private func configureItemView(itemView: SonarItemView, forWave waveIndex: Int, atIndex itemIndex: Int, numberOfItemsInWave _: Int) {
 
         itemView.alpha = 0.0
         self.addSubview(itemView)
-        _itemViews.append(itemView)
+        itemViews.append(itemView)
         itemView.position = SonarPosition(waveIndex: waveIndex, itemIndex: itemIndex)
 
         let itemSize = self.sonarViewLayout.sizeForItem(sonarView: self, inWave: waveIndex, atIndex: itemIndex)
@@ -184,7 +177,8 @@ public class SonarView: UIView {
         return label
     }
 
-    @objc func didSelectItem(sender: UIGestureRecognizer) {
+    @objc
+    func didSelectItem(sender: UIGestureRecognizer) {
         if let itemView = sender.view as? SonarItemView {
             delegate?.sonarView(sonarView: self, didSelectObjectInWave: itemView.position.waveIndex, atIndex: itemView.position.itemIndex)
         }

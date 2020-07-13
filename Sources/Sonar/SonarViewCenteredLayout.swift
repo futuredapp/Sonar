@@ -1,14 +1,7 @@
-//
-//  SonarViewCenteredLayout.swift
-//  Pods
-//
-//  Created by Aleš Kocur on 15/01/16.
-//
-//
 import Foundation
 import UIKit
 
-public protocol SonarViewCenteredLayoutDelegate: class {
+public protocol SonarViewCenteredLayoutDelegate: AnyObject {
     func sizeForItem(sonarView: SonarView, inWave waveIndex: Int, atIndex index: Int) -> CGSize
 }
 
@@ -36,13 +29,13 @@ extension SonarViewCenteredLayout: SonarViewLayout {
             return 0.0
         }
 
-        if numberOfItemsInWave % 2 == 0 {
+        if numberOfItemsInWave.isMultiple(of: 2) {
 
             let fullSegmentSize: Double = 100.0 // Just a value that represents 100%
             let segmentSize = (fullSegmentSize / Double(numberOfItemsInWave + 1)) + segmentPadding
             let padding: Double = segmentSize - edgeItemsShift
 
-            if index % 2 == 0 {
+            if index.isMultiple(of: 2) {
                 let size = (padding + (Double(index / 2) * segmentSize))
                 return size / fullSegmentSize
             } else {
@@ -55,10 +48,10 @@ extension SonarViewCenteredLayout: SonarViewLayout {
     }
 
     public func positionForWaveLabel(sonarView _: SonarView, inWave _: Int) -> Double {
-        return 0.5
+        0.5
     }
 
     public func waveRadiusOffset(sonarView _: SonarView) -> Double {
-        return waveRadiusOffset
+        waveRadiusOffset
     }
 }

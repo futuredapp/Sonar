@@ -1,33 +1,22 @@
-//
-//  WaveLayer.swift
-//  Sonar
-//
-//  Created by Aleš Kocur on 01/01/16.
-//  Copyright © 2016 Aleš Kocur. All rights reserved.
-//
 import UIKit
-
-enum WavesLayerError: Error {
-    case OutOfBounds
-}
 
 extension CGFloat {
     func toDegrees() -> CGFloat {
-        return self * (180.0 / CGFloat(Double.pi))
+        self * (180.0 / CGFloat(Double.pi))
     }
 }
 
 class WavesLayer: CALayer {
 
-    private(set) var _numberOfWaves: Int
-    private var _needsLayout = true
-    private var _waveLayers: [CALayer] = []
-    private var _distanceBetweenWaves: CGFloat = 0.0
-    weak var _sonarView: SonarView!
+    private(set) var numberOfWaves: Int
+    private var needsLayout = true
+    private var waveLayers: [CALayer] = []
+    private var distanceBetweenWaves: CGFloat = 0.0
+    weak var sonarView: SonarView!
 
-    init(frame: CGRect, numberOfWaves: Int = 5, sonarView: SonarView) {
-        self._sonarView = sonarView
-        self._numberOfWaves = numberOfWaves
+    init(frame: CGRect, sonarView: SonarView, numberOfWaves: Int = 5) {
+        self.sonarView = sonarView
+        self.numberOfWaves = numberOfWaves
         super.init()
         self.frame = frame
     }
@@ -37,13 +26,13 @@ class WavesLayer: CALayer {
     }
 
     override init(layer: Any) {
-        if let l = layer as? WavesLayer {
-            self._numberOfWaves = l.numberOfWaves()
-            self._sonarView = l._sonarView
-            self._waveLayers = l._waveLayers
-            self._needsLayout = false
+        if let layer = layer as? WavesLayer {
+            self.numberOfWaves = layer.numberOfWaves
+            self.sonarView = layer.sonarView
+            self.waveLayers = layer.waveLayers
+            self.needsLayout = false
         } else {
-            self._numberOfWaves = 5
+            self.numberOfWaves = 5
             assertionFailure("Missuse of the overriden initializatior!")
         }
         super.init(layer: layer)
@@ -52,21 +41,17 @@ class WavesLayer: CALayer {
     override func layoutSublayers() {
         super.layoutSublayers()
 
-        if self._needsLayout {
-            _needsLayout = false
+        if self.needsLayout {
+            needsLayout = false
             drawWaves()
         }
     }
 
     func setNumberOfWaves(numberOfWaves: Int) {
-        self._numberOfWaves = numberOfWaves
-        _needsLayout = true
+        self.numberOfWaves = numberOfWaves
+        needsLayout = true
         self.setNeedsLayout()
         self.layoutIfNeeded()
-    }
-
-    func numberOfWaves() -> Int {
-        return _numberOfWaves
     }
 
     private func drawWaves() {
@@ -77,8 +62,8 @@ class WavesLayer: CALayer {
             self._drawWaves()
         }
 
-        _waveLayers.forEach { layer in
-            
+        waveLayers.forEach { layer in
+
             addAnimation(for: "strokeEnd", layer: layer)
             if let layer = layer as? RadialGradientLayer {
 
@@ -93,10 +78,10 @@ class WavesLayer: CALayer {
                               layer: CALayer,
                               isReverted: Bool = true,
                               beginTime: CFTimeInterval? = nil) {
-        
+
         let animation = CABasicAnimation(keyPath: keyPath)
         if let beginTime = beginTime {
-            
+
             animation.beginTime = beginTime
         }
         animation.duration = 0.3
@@ -106,23 +91,23 @@ class WavesLayer: CALayer {
         animation.fillMode = .forwards
         layer.add(animation, forKey: keyPath)
     }
-    
+
     private func _drawWaves() {
         // Clean up existing layers if there are some
-        _waveLayers.forEach { $0.removeFromSuperlayer() }
-        _waveLayers.removeAll()
+        waveLayers.forEach { $0.removeFromSuperlayer() }
+        waveLayers.removeAll()
 
         // Calculate distance between layers
-        _distanceBetweenWaves = calculateDistanceBetweenWaves()
+        distanceBetweenWaves = calculateDistanceBetweenWaves()
 
-        if _numberOfWaves == 0 {
+        if numberOfWaves == 0 {
             return
         }
 
         // Draw new layers
-        for num in (0 ..< _numberOfWaves).reversed() {
-            let calculatedRadius = CGFloat(num + 1) * _distanceBetweenWaves
-            let radius = calculatedRadius + (calculatedRadius * CGFloat(_sonarView.sonarViewLayout.waveRadiusOffset(sonarView: _sonarView)))
+        for num in (0 ..< numberOfWaves).reversed() {
+            let calculatedRadius = CGFloat(num + 1) * distanceBetweenWaves
+            let radius = calculatedRadius + (calculatedRadius * CGFloat(sonarView.sonarViewLayout.waveRadiusOffset(sonarView: sonarView)))
             let layer = self.circleWithRadius(radius: radius)
 
             addAnimation(for: "strokeEnd",
@@ -134,7 +119,7 @@ class WavesLayer: CALayer {
 
             layer.frame = self.bounds
             self.addSublayer(layer)
-            _waveLayers.append(layer)
+            waveLayers.append(layer)
 
             let gradientColors = [UIColor.white.cgColor, UIColor.white.cgColor, SonarView.lineShadowColor.cgColor]
             let gradientSize = 1.0 - (18 / radius)
@@ -145,42 +130,42 @@ class WavesLayer: CALayer {
                          layer: gradient,
                          isReverted: false,
                          beginTime: CACurrentMediaTime() + Double(num) * 0.3)
-            
+
             gradient.opacity = 0.0
             self.addSublayer(gradient)
-            _waveLayers.append(gradient)
+            waveLayers.append(gradient)
         }
     }
 
     private func calculateDistanceBetweenWaves() -> CGFloat {
-        return self.frame.height / CGFloat((_numberOfWaves + 1))
+        self.frame.height / CGFloat((numberOfWaves + 1))
     }
 
-    func circleAnglesForRadius(radius r: CGFloat) -> (startAngle: CGFloat, endAngle: CGFloat) {
-        let w = Double(self.frame.width)
+    func circleAnglesForRadius(radius: CGFloat) -> (startAngle: CGFloat, endAngle: CGFloat) {
+        let width = Double(self.frame.width)
         // Calculate angle α from equation b = 2a × cosα for isosceles triangle
-        let b: Double = w < (Double(r) * 2) ? w : Double(r)
-        let a = Double(r)
+        let b: Double = width < (Double(radius) * 2) ? width : Double(radius)
+        let a = Double(radius)
         let alpha = acos(b / (2 * a))
 
         let beta = Double.pi - (Double(alpha) * 2)
 
         // Add up half of computed angle to either side from the top of arc (3/2⫪)
         let halfOfBeta = beta / 2
-        let M_3_2_PI: Double = (3 / 2) * Double.pi // just a 3/2⫪ constant
-        // TODO: The rounding is ugly!!!
-        let startRad = Double(round(1000 * alpha) / 1000) == Double(round(1000 * beta) / 1000) ? CGFloat(Double.pi) : CGFloat(M_3_2_PI - halfOfBeta)
-        let endRad = Double(round(1000 * alpha) / 1000) == Double(round(1000 * beta) / 1000) ? CGFloat(2 * Double.pi) : CGFloat(M_3_2_PI + halfOfBeta)
+        let piAndHalf = 1.5 * Double.pi // just a 3/2⫪ constant
+
+        let startRad = Double(round(1_000 * alpha) / 1_000) == Double(round(1_000 * beta) / 1_000) ? CGFloat(Double.pi) : CGFloat(piAndHalf - halfOfBeta)
+        let endRad = Double(round(1_000 * alpha) / 1_000) == Double(round(1_000 * beta) / 1_000) ? CGFloat(2 * Double.pi) : CGFloat(piAndHalf + halfOfBeta)
 
         return (startAngle: startRad, endAngle: endRad)
     }
 
-    private func circleWithRadius(radius r: CGFloat) -> CAShapeLayer {
+    private func circleWithRadius(radius: CGFloat) -> CAShapeLayer {
 
-        let circlePath = self.circleAnglesForRadius(radius: r)
+        let circlePath = self.circleAnglesForRadius(radius: radius)
         let arcCenter = CGPoint(x: self.frame.width / 2, y: self.frame.height)
 
-        let arc = UIBezierPath(arcCenter: arcCenter, radius: r, startAngle: circlePath.startAngle, endAngle: circlePath.endAngle, clockwise: true)
+        let arc = UIBezierPath(arcCenter: arcCenter, radius: radius, startAngle: circlePath.startAngle, endAngle: circlePath.endAngle, clockwise: true)
         let layer = CAShapeLayer()
 
         layer.path = arc.cgPath
@@ -194,7 +179,7 @@ class WavesLayer: CALayer {
     }
 
     func radiusForWave(waveIndex index: Int) -> CGFloat {
-        if index < 0 || index >= _numberOfWaves {
+        if index < 0 || index >= numberOfWaves {
             assertionFailure("*** WavesLayer: Out of range!")
         }
 
