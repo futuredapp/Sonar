@@ -1,5 +1,5 @@
-import UIKit
 import Sonar
+import UIKit
 
 final class TestSonarItemView: SonarItemView {
 
@@ -19,5 +19,4 @@ final class TestSonarItemView: SonarItemView {
         super.awakeFromNib()
         self.imageView.clipsToBounds = true
     }
-
 }

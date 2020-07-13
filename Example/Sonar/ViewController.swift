@@ -1,7 +1,7 @@
-import UIKit
 import CoreLocation
-import Sonar
 import MapKit
+import Sonar
+import UIKit
 
 final class ViewController: UIViewController {
 
@@ -15,7 +15,6 @@ final class ViewController: UIViewController {
 
         self.sonarView.delegate = self
         self.sonarView.dataSource = self
-
     }
 
     @IBAction private func reloadData(_ sender: AnyObject) {
@@ -25,7 +24,7 @@ final class ViewController: UIViewController {
 
 extension ViewController: SonarViewDataSource {
     func numberOfWaves(sonarView: SonarView) -> Int {
-        return 4
+        4
     }
 
     func sonarView(sonarView: SonarView, numberOfItemForWaveIndex waveIndex: Int) -> Int {
@@ -51,8 +50,7 @@ extension ViewController: SonarViewDataSource {
     // MARK: - Helpers
 
     private func randomAvatar() -> UIImage {
-        let index = arc4random_uniform(3) + 1
-        return UIImage(named: "avatar\(index)")!
+        UIImage(named: "avatar\(Int.random(in: 1...3))")!
     }
 
     private func newItemView() -> TestSonarItemView {
@@ -68,7 +66,7 @@ extension ViewController: SonarViewDelegate {
 
     func sonarView(sonarView: SonarView, textForWaveAtIndex waveIndex: Int) -> String? {
 
-        if self.sonarView(sonarView: sonarView, numberOfItemForWaveIndex: waveIndex) % 2 == 0 {
+        if self.sonarView(sonarView: sonarView, numberOfItemForWaveIndex: waveIndex).isMultiple(of: 2) {
             return self.distanceFormatter.string(fromDistance: 100.0 * Double(waveIndex + 1))
         } else {
             return nil

@@ -2,7 +2,7 @@ import UIKit
 
 extension CGFloat {
     func toDegrees() -> CGFloat {
-        return self * (180.0 / CGFloat(Double.pi))
+        self * (180.0 / CGFloat(Double.pi))
     }
 }
 
@@ -14,7 +14,7 @@ class WavesLayer: CALayer {
     private var distanceBetweenWaves: CGFloat = 0.0
     weak var sonarView: SonarView!
 
-    init(frame: CGRect, numberOfWaves: Int = 5, sonarView: SonarView) {
+    init(frame: CGRect, sonarView: SonarView, numberOfWaves: Int = 5) {
         self.sonarView = sonarView
         self.numberOfWaves = numberOfWaves
         super.init()
@@ -138,7 +138,7 @@ class WavesLayer: CALayer {
     }
 
     private func calculateDistanceBetweenWaves() -> CGFloat {
-        return self.frame.height / CGFloat((numberOfWaves + 1))
+        self.frame.height / CGFloat((numberOfWaves + 1))
     }
 
     func circleAnglesForRadius(radius: CGFloat) -> (startAngle: CGFloat, endAngle: CGFloat) {
@@ -154,8 +154,8 @@ class WavesLayer: CALayer {
         let halfOfBeta = beta / 2
         let piAndHalf = 1.5 * Double.pi // just a 3/2⫪ constant
 
-        let startRad = Double(round(1000 * alpha) / 1000) == Double(round(1000 * beta) / 1000) ? CGFloat(Double.pi) : CGFloat(piAndHalf - halfOfBeta)
-        let endRad = Double(round(1000 * alpha) / 1000) == Double(round(1000 * beta) / 1000) ? CGFloat(2 * Double.pi) : CGFloat(piAndHalf + halfOfBeta)
+        let startRad = Double(round(1_000 * alpha) / 1_000) == Double(round(1_000 * beta) / 1_000) ? CGFloat(Double.pi) : CGFloat(piAndHalf - halfOfBeta)
+        let endRad = Double(round(1_000 * alpha) / 1_000) == Double(round(1_000 * beta) / 1_000) ? CGFloat(2 * Double.pi) : CGFloat(piAndHalf + halfOfBeta)
 
         return (startAngle: startRad, endAngle: endRad)
     }

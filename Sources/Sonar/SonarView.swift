@@ -1,12 +1,12 @@
 import UIKit
 
-public protocol SonarViewDataSource: class {
+public protocol SonarViewDataSource: AnyObject {
     func numberOfWaves(sonarView: SonarView) -> Int
     func sonarView(sonarView: SonarView, numberOfItemForWaveIndex waveIndex: Int) -> Int
     func sonarView(sonarView: SonarView, itemViewForWave waveIndex: Int, atIndex: Int) -> SonarItemView
 }
 
-public protocol SonarViewDelegate: class {
+public protocol SonarViewDelegate: AnyObject {
     func sonarView(sonarView: SonarView, didSelectObjectInWave waveIndex: Int, atIndex: Int)
     func sonarView(sonarView: SonarView, textForWaveAtIndex waveIndex: Int) -> String?
 }
@@ -55,7 +55,7 @@ public class SonarView: UIView {
         self.layer.addSublayer(self.waveLayer)
     }
 
-    public override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
 
         if needsLayout {
